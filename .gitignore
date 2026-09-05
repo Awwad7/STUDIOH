@@ -2,7 +2,5 @@
 .DS_Store
 Thumbs.db
 
-# local media that the studio uploads separately (keep the folder + README)
-media/*.mp4
-media/*.mov
-media/*.webm
+# The video assets now live in the repo (media/*.mp4) so the site is
+# self-contained and hostable straight from Git / GitHub Pages.
