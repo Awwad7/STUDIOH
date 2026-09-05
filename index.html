@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>StudiOH° — A lean creative production studio</title>
+<meta name="description" content="StudiOH° is a lean, senior, tech-enabled creative production studio. 15 years of craft, no dilution, no hand-offs.">
+<meta name="theme-color" content="#0a0b12">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Lora:ital,wght@1,600;1,700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- INTRO / LOADING SCREEN -->
+<div class="intro" data-intro>
+  <div class="intro-meta">
+    <span>Brief_SOH_001 · Issue 001</span>
+    <span data-intro-status>Initialising</span>
+  </div>
+  <div class="intro-count display" data-intro-count>0</div>
+  <div class="intro-bar-track">
+    <div class="intro-bar-fill" data-intro-bar></div>
+  </div>
+  <div class="intro-caption">A lean creative production studio</div>
+</div>
+
+<!-- NAV -->
+<nav class="nav">
+  <div class="nav-logo display" data-nav-logo>STUDI<span>OH</span><span class="deg">°</span></div>
+  <button class="nav-burger" data-menu-toggle aria-label="Open menu" aria-expanded="false" aria-controls="chapter-menu">
+    <span></span>
+    <span></span>
+  </button>
+</nav>
+
+<!-- CHAPTER MENU -->
+<div class="chapter-menu" id="chapter-menu" data-menu>
+  <a href="#story" class="display" data-menu-close>01 · Origin</a>
+  <a href="#moat" class="display" data-menu-close>02 · Our moat</a>
+  <a href="#services" class="display" data-menu-close>03 · Services</a>
+  <a href="#work" class="display" data-menu-close>04 · The work</a>
+  <a href="#start" class="display" data-menu-close>05 · Let's start</a>
+  <button class="chapter-menu-close" data-menu-close>Close</button>
+</div>
+
+<!-- CHAPTER RAIL -->
+<div class="chapter-rail" data-chapter-rail>
+  <a href="#story" class="rail-item" data-rail-dot data-target="origin"><span class="rail-label" data-rail-label>01 Origin</span><span class="rail-mark" data-rail-mark></span></a>
+  <a href="#moat" class="rail-item" data-rail-dot data-target="moat"><span class="rail-label" data-rail-label>02 Moat</span><span class="rail-mark" data-rail-mark></span></a>
+  <a href="#services" class="rail-item" data-rail-dot data-target="services"><span class="rail-label" data-rail-label>03 Services</span><span class="rail-mark" data-rail-mark></span></a>
+  <a href="#work" class="rail-item" data-rail-dot data-target="work"><span class="rail-label" data-rail-label>04 Work</span><span class="rail-mark" data-rail-mark></span></a>
+  <a href="#start" class="rail-item" data-rail-dot data-target="start"><span class="rail-label" data-rail-label>05 Start</span><span class="rail-mark" data-rail-mark></span></a>
+</div>
+
+<!-- HERO -->
+<section class="hero-track" data-hero-track>
+  <div class="hero-pin" data-hero-pin>
+    <div class="hero-grad"></div>
+    <video class="hero-video" data-hero-video muted loop playsinline webkit-playsinline poster="media/hero-poster.jpg" data-src="media/hero.mp4"></video>
+    <div class="hero-vignette"></div>
+    <div class="hero-light" data-hero-light></div>
+    <canvas class="ray-canvas hero-rays" data-hero-rays></canvas>
+
+    <div class="head-wrap" data-head-wrap>
+      <h1 class="white-head display" data-white-head>STUDI<span>OH</span><span class="deg deg-dark">°</span></h1>
+      <h1 class="clip-head display" data-clip-head>STUDI<span>OH</span><span class="deg deg-accent">°</span></h1>
+    </div>
+
+    <div class="hero-cue" data-cue>
+      <span>Scroll to explore</span>
+      <span class="hero-cue-line"></span>
+    </div>
+  </div>
+</section>
+
+<!-- STORY VIDEO -->
+<section id="story" class="story-section" data-storyvid-sec>
+  <div class="story-pin">
+    <video class="story-video" data-story-video muted playsinline webkit-playsinline preload="none" poster="media/story-poster.jpg" data-src="media/story.mp4"></video>
+
+    <div class="story-ready" data-ready>
+      <div class="display">READY<span class="accent-ink">?</span></div>
+    </div>
+
+    <div class="hover-zone" data-hover-zone>
+      <div class="hover-note" data-hover-note>
+        <span class="hover-dot"></span>
+        <span class="hover-line" data-hover-line></span>
+        <span class="hover-pill" data-hover-pill>Hover to read</span>
+      </div>
+    </div>
+
+    <div class="hover-moat" data-hover-moat>
+      <div class="hover-moat-inner">
+        <div class="label-row"><span class="label-dot"></span><span class="label-text">Our moat</span></div>
+        <h3 class="display">Great production<br>should be <span class="accent-ink">simple</span></h3>
+        <button class="moat-tapclose" data-moat-tapclose>Close</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="page-canvas">
+
+  <!-- STATEMENT -->
+  <section class="statement-section">
+    <div class="statement" data-reveal>
+      <p class="display">15 years in the industry. One realization; the machine is getting rusty</p>
+    </div>
+  </section>
+
+  <!-- ORIGIN -->
+  <section id="origin" class="origin-section">
+    <div class="label-row"><span class="label-dot"></span><span class="label-text">Origin</span></div>
+    <h2 class="origin-headline display" data-reveal>SO We <span class="reshaped" data-reshaped>RESHAPED</span></h2>
+    <div class="moat-card-wrap">
+      <div class="moat-card" data-img data-parallax data-speed="0.04" data-cap="14" data-moat-card>
+        <div class="live-frame" data-live-frame data-theme="mix"></div>
+        <video class="machine-video" data-machine-video muted loop playsinline data-src="media/machine.mp4" poster="media/machine-poster.jpg"></video>
+        <div class="machine-box" data-machine-box>
+          <span class="machine-text display" data-machine-text>the machine</span>
+        </div>
+        <div class="moat-banner" data-moat-banner>
+          <span class="moat-banner-text">Our moat</span>
+          <span class="moat-banner-arrow">→</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MOAT MODAL -->
+  <div class="moat-modal" data-moat-modal>
+    <div class="moat-modal-card">
+      <button class="moat-close" data-moat-close aria-label="Close">✕</button>
+      <h3 class="display">Our <span class="accent-ink">moat</span></h3>
+      <p>15 years inside the approval chains of global brands taught us which ideas survive and which die in the third round. The people who take your brief are the people who produce the film.</p>
+    </div>
+  </div>
+
+  <!-- MOAT -->
+  <section id="moat" class="moat-section">
+    <div class="label-row"><span class="label-dot"></span><span class="label-text">Our moat</span></div>
+    <h2 class="moat-headline display" data-reveal>CREATIVE PRODUCTION should be <span class="rotate-word" data-rotate>simple</span></h2>
+  </section>
+
+  <!-- SERVICES -->
+  <section id="services" class="services-section">
+    <div class="services-header">
+      <div class="label-row"><span class="label-dot"></span><span class="label-text">In service of</span></div>
+      <span class="services-sub">Three disciplines · One team</span>
+    </div>
+
+    <div class="services-grid">
+      <article class="svc-card svc-01" data-svc>
+        <span class="svc-tape"></span>
+        <div class="svc-top">
+          <span class="svc-num display">01</span>
+          <span class="svc-label">Discipline /<br>Creative</span>
+        </div>
+        <h3 class="svc-title display">Concept &amp; <span class="accent-ink">Campaign</span></h3>
+        <p class="svc-body">We find the one true tension in the brief and build the idea that makes the work inevitable; before a single frame is shot.</p>
+        <ul class="svc-list">
+          <li><span class="dash dash-accent">—</span>Creative concepting</li>
+          <li><span class="dash">—</span>Campaign platforms</li>
+          <li><span class="dash dash-accent">—</span>Art direction</li>
+          <li><span class="dash">—</span>Scripting &amp; storyboards</li>
+        </ul>
+        <span class="svc-tagline">the idea.</span>
+      </article>
+
+      <article class="svc-card svc-02" data-svc>
+        <span class="svc-tape"></span>
+        <div class="svc-top">
+          <span class="svc-num display">02</span>
+          <span class="svc-label">Discipline /<br>Executional</span>
+        </div>
+        <h3 class="svc-title display">Production <span class="accent-ink">&amp; Delivery</span></h3>
+        <p class="svc-body">Brief to broadcast with a lean senior crew. No hand-offs, no dilution, no hours billed to process nobody asked for.</p>
+        <ul class="svc-list">
+          <li><span class="dash dash-accent">—</span>Film &amp; photo production</li>
+          <li><span class="dash">—</span>Post &amp; motion</li>
+          <li><span class="dash dash-accent">—</span>Campaign roll-out</li>
+          <li><span class="dash">—</span>Localisation at volume</li>
+        </ul>
+        <span class="svc-tagline">the doing.</span>
+      </article>
+
+      <article class="svc-card svc-03" data-svc>
+        <span class="svc-tape"></span>
+        <div class="svc-top">
+          <span class="svc-num display">03</span>
+          <span class="svc-label">Discipline /<br>Applied tech</span>
+        </div>
+        <h3 class="svc-title display">The <span class="accent-ink">Speed Layer</span></h3>
+        <p class="svc-body">The tools that do the heavy lifting.</p>
+        <ul class="svc-list">
+          <li><span class="dash dash-accent">—</span>AI-assisted pre-viz</li>
+          <li><span class="dash">—</span>Automated versioning</li>
+          <li><span class="dash dash-accent">—</span>Content pipelines</li>
+          <li><span class="dash">—</span>Asset systems</li>
+        </ul>
+        <span class="svc-tagline">the multiplier.</span>
+      </article>
+    </div>
+  </section>
+
+  <!-- WORK -->
+  <section id="work" class="work-section">
+    <div class="work-intro">
+      <div class="label-row"><span class="label-dot"></span><span class="label-text">The work</span></div>
+      <h2 class="work-headline display" data-reveal>The names change.<br>The standard doesn't.</h2>
+      <p class="work-kicker" data-reveal>OUR TEAM WORKED ON PROJECTS FOR:</p>
+    </div>
+
+    <div class="marquee">
+      <div class="marquee-track">
+        <div class="logos" data-logos></div>
+        <div class="logos" data-logos></div>
+      </div>
+    </div>
+
+    <div class="work-sub-wrap">
+      <div class="work-sub">
+        <span class="work-sub-title display">What we make</span>
+        <span class="work-sub-hint">Hover to preview · Click to play</span>
+      </div>
+      <div class="tile-grid">
+        <div class="tile" data-tile data-src="media/maggi.mp4" data-title="Maggi" data-client="Empowering Women">
+          <div class="live-frame" data-live-frame data-theme="green"></div>
+          <video class="tile-video" data-tile-video muted loop playsinline preload="none" poster="media/maggi-poster.jpg"></video>
+          <div class="tile-scrim"></div>
+          <div class="tile-caption">
+            <div class="tile-eyebrow">Feature / 01</div>
+            <div class="tile-title display">Maggi</div>
+            <div class="tile-client">Empowering Women</div>
+          </div>
+        </div>
+        <div class="tile" data-tile data-src="media/chase.mp4" data-title="Chase Bank" data-client="Know Your Customer">
+          <div class="live-frame" data-live-frame data-theme="blue"></div>
+          <video class="tile-video" data-tile-video muted loop playsinline preload="none" poster="media/chase-poster.jpg"></video>
+          <div class="tile-scrim"></div>
+          <div class="tile-caption">
+            <div class="tile-eyebrow">Feature / 02</div>
+            <div class="tile-title display">Chase Bank</div>
+            <div class="tile-client">Know Your Customer</div>
+          </div>
+        </div>
+        <div class="tile" data-tile data-src="media/showreel.mp4" data-title="Showreel" data-client="StudiOH · 2026">
+          <div class="live-frame" data-live-frame data-theme="green"></div>
+          <video class="tile-video" data-tile-video muted loop playsinline preload="none" poster="media/showreel-poster.jpg"></video>
+          <div class="tile-scrim"></div>
+          <div class="tile-caption">
+            <div class="tile-eyebrow">Feature / 03</div>
+            <div class="tile-title display">Showreel</div>
+            <div class="tile-client">StudiOH · 2026</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- LIGHTBOX -->
+<div class="lightbox" data-lightbox>
+  <button class="lb-close" data-lb-close aria-label="Close">✕</button>
+  <div class="lb-inner">
+    <div class="lb-frame">
+      <video class="lb-video" data-lb-video playsinline loop></video>
+    </div>
+    <div class="lb-info">
+      <div>
+        <div class="lb-title display" data-lb-title></div>
+        <div class="lb-client" data-lb-client></div>
+      </div>
+      <div class="lb-actions">
+        <button class="lb-btn" data-lb-play>Pause</button>
+        <button class="lb-btn" data-lb-mute>Unmute</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- START -->
+<canvas class="ray-canvas page-rays" data-rays></canvas>
+<section id="start" class="start-section">
+  <div class="start-glow"></div>
+  <div class="start-inner">
+    <div class="label-text start-eyebrow" data-reveal>Let's start</div>
+    <h2 class="start-headline display" data-reveal>Got something<br>worth making?</h2>
+    <a class="start-cta" href="mailto:hello@studioh.co" data-reveal>BOOK A CALL<span class="accent-ink">→</span></a>
+  </div>
+  <div class="footer-row">
+    <div class="footer-logo display">STUDI<span>OH</span><span class="deg-accent">°</span></div>
+    <div class="footer-meta">A lean production studio · 15 years of craft</div>
+  </div>
+</section>
+
+<script src="js/app.js" defer></script>
+</body>
+</html>
