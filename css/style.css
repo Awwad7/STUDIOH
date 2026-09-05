@@ -1,4 +1,18 @@
 /* ============================================================
+   Self-hosted display face (optional — see fonts/README.md).
+   If fonts/CalSansVF.woff2 is present it wins; if not, the browser
+   falls through to Google Fonts 'Cal Sans' in the --font-display stack.
+   ============================================================ */
+@font-face {
+  font-family: 'Cal Sans Local';
+  src: url('../fonts/CalSansVF.woff2') format('woff2-variations'),
+       url('../fonts/CalSansVF.woff2') format('woff2');
+  font-weight: 400 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* ============================================================
    StudiOH° — design tokens
    ============================================================ */
 :root {
@@ -26,8 +40,11 @@
   --banner-scrim: #06070ce8;
   --modal-surface: #0f0e17;
 
-  --font-display: 'Space Grotesk', system-ui, sans-serif;
-  --font-sans: 'Space Grotesk', system-ui, sans-serif;
+  /* Display: prefer the studio's self-hosted variable Cal Sans (drop
+     CalSansVF.woff2 into /fonts — see fonts/README.md); otherwise fall
+     back to Google Fonts Cal Sans (same face, single weight), then Inter. */
+  --font-display: 'Cal Sans Local', 'Cal Sans', 'Inter', system-ui, sans-serif;
+  --font-sans: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
   --font-serif: 'Lora', Georgia, serif;
 
   --ease-expo: cubic-bezier(.16, 1, .3, 1);
@@ -59,6 +76,9 @@ img, video { max-width: 100%; display: block; }
   letter-spacing: -0.03em;
   text-transform: uppercase;
   line-height: 0.86;
+  /* Cal Sans falls to a single-weight web build when not self-hosted;
+     don't let the browser fake a heavier weight on top of it. */
+  font-synthesis: none;
 }
 .accent-ink { color: var(--accent); }
 .deg { vertical-align: super; font-size: 0.5em; }
@@ -597,7 +617,7 @@ img, video { max-width: 100%; display: block; }
 .dash-accent { color: var(--accent); opacity: 1; }
 .svc-tagline {
   position: absolute;
-  font: italic 600 15px/1 var(--font-sans);
+  font: italic 700 15px/1 var(--font-serif);
   color: var(--accent);
   white-space: nowrap;
 }
