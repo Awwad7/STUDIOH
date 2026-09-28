@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta charset="utf-8">
-<title>BespokeJobs brag</title>
+<title>BespokeJobs brag v2</title>
 <style>
 @font-face{font-family:Inter;src:url(inter.woff2) format('woff2');font-weight:100 900;font-display:block}
 *{box-sizing:border-box;margin:0;padding:0}
@@ -10,56 +10,57 @@ html,body{width:1920px;height:1080px;overflow:hidden;background:#05060C}
 body{font-family:Inter,sans-serif;color:#F2F4F7;-webkit-font-smoothing:antialiased;font-feature-settings:"cv11","ss01"}
 #stage{position:absolute;inset:0;overflow:hidden;background:#05060C}
 .grid{position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.03) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.03) 1px,transparent 1px);background-size:64px 64px;background-position:-1px -1px}
-.glow{position:absolute;width:1700px;height:1200px;margin:-600px 0 0 -850px;background:radial-gradient(closest-side,rgba(28,110,104,.55),rgba(12,48,48,.28) 55%,rgba(5,6,12,0));pointer-events:none}
-.vignette{position:absolute;inset:0;background:radial-gradient(ellipse at center,rgba(0,0,0,0) 55%,rgba(0,0,0,.6))}
+.glow{position:absolute;left:960px;top:560px;width:1700px;height:1200px;margin:-600px 0 0 -850px;background:radial-gradient(closest-side,rgba(28,110,104,.55),rgba(12,48,48,.28) 55%,rgba(5,6,12,0))}
+.vignette{position:absolute;inset:0;background:radial-gradient(ellipse at center,rgba(0,0,0,0) 55%,rgba(0,0,0,.62));pointer-events:none}
 .abs{position:absolute}
-.scene{position:absolute;inset:0;opacity:0}
-.eyebrow{position:absolute;left:0;right:0;top:108px;text-align:center;color:#5EE8D4;font-size:26px;font-weight:600;letter-spacing:.22em;text-transform:uppercase}
-.head{position:absolute;left:0;right:0;top:146px;text-align:center;font-size:70px;font-weight:700;letter-spacing:-.028em;line-height:1.1}
+.halo{text-shadow:0 0 30px #05060C,0 0 60px #05060C,0 0 12px #05060C}
+.eyebrow{position:absolute;left:0;right:0;top:100px;text-align:center;color:#5EE8D4;font-size:26px;font-weight:650;letter-spacing:.22em;text-transform:uppercase}
+.head{position:absolute;left:0;right:0;top:138px;text-align:center;font-size:72px;font-weight:750;letter-spacing:-.03em;line-height:1.1}
 .card{background:#0C1018;border:1px solid rgba(255,255,255,.08);border-radius:28px;box-shadow:0 30px 90px rgba(0,0,0,.55)}
 .mint{color:#5EE8D4}.muted{color:#8A93A3}
 .logo{display:flex;align-items:center;white-space:nowrap}
 .tile{background:#5EE8D4;color:#05110F;font-weight:800;display:flex;align-items:center;justify-content:center;letter-spacing:-.02em}
-.wm{font-weight:700;letter-spacing:-.03em}
-.ai{font-weight:700;color:#5EE8D4;letter-spacing:-.02em}
+.wm{font-weight:700;letter-spacing:-.03em}.ai{font-weight:700;color:#5EE8D4;letter-spacing:-.02em}
 .skel{position:absolute;border-radius:8px;background:rgba(255,255,255,.07)}
 .line{height:10px;border-radius:5px;background:rgba(255,255,255,.12);margin-bottom:14px}
-.chip{display:inline-flex;align-items:center;height:62px;padding:0 28px;border-radius:999px;background:rgba(94,232,212,.08);border:1.5px solid rgba(94,232,212,.38);color:#5EE8D4;font-size:28px;font-weight:550;margin:0 14px 16px 0;white-space:nowrap}
+.chip{position:absolute;left:0;top:0;display:inline-flex;align-items:center;height:60px;padding:0 26px;border-radius:999px;background:#0A1618;border:1.5px solid rgba(94,232,212,.5);color:#5EE8D4;font-size:27px;font-weight:600;white-space:nowrap;box-shadow:0 10px 30px rgba(0,0,0,.5)}
 .row{position:absolute;left:0;width:1200px;height:112px;border-radius:22px;background:#0C1018;border:1.5px solid rgba(255,255,255,.07)}
 .row .t{position:absolute;left:40px;top:22px;font-size:36px;font-weight:650;letter-spacing:-.015em}
 .row .s{position:absolute;left:40px;top:68px;font-size:22px;color:#8A93A3}
 .row .track{position:absolute;right:170px;top:52px;width:280px;height:10px;border-radius:5px;background:rgba(255,255,255,.08);overflow:hidden}
 .row .fill{height:100%;border-radius:5px;background:#5EE8D4;width:0}
-.row .n{position:absolute;right:44px;top:26px;width:100px;text-align:right;font-size:52px;font-weight:700;color:#5EE8D4;font-variant-numeric:tabular-nums;letter-spacing:-.02em}
+.row .n{position:absolute;right:44px;top:26px;text-align:right;font-size:52px;font-weight:700;color:#5EE8D4;font-variant-numeric:tabular-nums;letter-spacing:-.02em;line-height:1.15}
 .pill{position:absolute;height:34px;padding:0 14px;border-radius:999px;background:rgba(94,232,212,.14);color:#5EE8D4;font-size:18px;font-weight:650;letter-spacing:.08em;text-transform:uppercase;display:flex;align-items:center}
-.bar{position:absolute;left:0;width:680px}
+.bar{position:absolute;left:960px;width:680px;transform-origin:0 50%}
 .bar .l{font-size:38px;font-weight:650;letter-spacing:-.015em}
 .bar .v{position:absolute;right:0;top:0;font-size:38px;font-weight:700;color:#5EE8D4;font-variant-numeric:tabular-nums}
 .bar .track{margin-top:16px;height:14px;border-radius:7px;background:rgba(255,255,255,.08);overflow:hidden}
 .bar .fill{height:100%;border-radius:7px;background:#5EE8D4;width:0}
-.doc{position:absolute;width:420px;height:540px;padding:40px 36px}
+.doc{position:absolute;top:300px;width:420px;height:540px;padding:40px 36px}
 .doc .dt{font-size:38px;font-weight:700;letter-spacing:-.02em}
-.doc .ds{font-size:22px;font-weight:600;color:#5EE8D4;margin:8px 0 34px}
+.doc .ds{font-size:22px;font-weight:600;color:#5EE8D4;margin:8px 0 30px;height:28px}
 .btn{position:absolute;left:36px;right:36px;bottom:32px;height:62px;border-radius:14px;border:1.5px solid rgba(94,232,212,.55);color:#5EE8D4;font-size:24px;font-weight:650;display:flex;align-items:center;justify-content:center;gap:10px}
 .cta{height:104px;padding:0 60px;border-radius:999px;background:#5EE8D4;color:#05110F;font-size:42px;font-weight:750;letter-spacing:-.02em;display:flex;align-items:center;white-space:nowrap}
-#cursor{position:absolute;left:0;top:0;width:52px;height:52px;opacity:0;z-index:50;filter:drop-shadow(0 6px 14px rgba(0,0,0,.55))}
-#ripple{position:absolute;left:0;top:0;width:120px;height:120px;margin:-60px 0 0 -60px;border-radius:50%;border:3px solid #5EE8D4;opacity:0;z-index:49}
+#cursor{position:absolute;left:0;top:0;width:52px;height:52px;opacity:0;z-index:60;filter:drop-shadow(0 6px 14px rgba(0,0,0,.55))}
+#ripple{position:absolute;left:0;top:0;width:120px;height:120px;margin:-60px 0 0 -60px;border-radius:50%;border:3px solid #5EE8D4;opacity:0;z-index:59}
 </style>
 <script src="rms.js"></script>
 </head>
 <body>
 <div id="stage">
-  <div class="grid"></div>
+  <div class="grid" id="grid"></div>
   <div class="glow" id="glow"></div>
+  <canvas id="field" width="1920" height="1080" style="position:absolute;left:0;top:0"></canvas>
   <div class="vignette"></div>
 </div>
 <script>
+window.DURATION = 24.62;
 const $s = document.getElementById('stage');
 const C = (x, a = 0, b = 1) => Math.min(b, Math.max(a, x));
 const P = (t, a, b) => C((t - a) / (b - a));
 const eo = x => 1 - Math.pow(1 - x, 3);
 const eio = x => x < .5 ? 4 * x * x * x : 1 - Math.pow(-2 * x + 2, 3) / 2;
-const eb = x => { const c1 = 1.5, c3 = c1 + 1; return x <= 0 ? 0 : 1 + c3 * Math.pow(x - 1, 3) + c1 * Math.pow(x - 1, 2); };
+const eb = x => { const c1 = 1.6, c3 = c1 + 1; return x <= 0 ? 0 : 1 + c3 * Math.pow(x - 1, 3) + c1 * Math.pow(x - 1, 2); };
 const L = (a, b, x) => a + (b - a) * x;
 function el(tag, cls, css, html, parent) {
   const e = document.createElement(tag);
@@ -70,20 +71,27 @@ function el(tag, cls, css, html, parent) {
   return e;
 }
 function S(e, o) {
-  if (o.o !== undefined) e.style.opacity = C(o.o);
-  e.style.transform = `translate(${o.x || 0}px,${o.y || 0}px) scale(${o.s ?? 1}) rotate(${o.r || 0}deg)`;
+  if (o.o !== undefined) { e.style.opacity = C(o.o); e.style.visibility = o.o <= .001 ? 'hidden' : 'visible'; }
+  e.style.transform = `translate(${o.x || 0}px,${o.y || 0}px) scale(${o.sx ?? o.s ?? 1},${o.sy ?? o.s ?? 1}) rotate(${o.r || 0}deg)`;
   if (o.blur !== undefined) e.style.filter = o.blur > .05 ? `blur(${o.blur}px)` : 'none';
 }
-function rise(e, t, a, d = .42, dy = 26) { const k = eo(P(t, a, a + d)); S(e, { o: k, y: (1 - k) * dy }); return k; }
-function pop(e, t, a, d = .42) { const k = P(t, a, a + d); S(e, { o: C(k * 3), s: L(.6, 1, eb(k)) }); return k; }
+// fade/rise in at a, fade/lift out ending at b
+function show(e, t, a, b, dy = 26, fi = .42, fo = .26) {
+  const ki = eo(P(t, a, a + fi)), ko = eio(P(t, b - fo, b));
+  S(e, { o: ki * (1 - ko), y: (1 - ki) * dy - ko * 18, blur: ko * 5 });
+  return ki * (1 - ko);
+}
+function pop(e, t, a, d = .42, extra = {}) { const k = P(t, a, a + d); S(e, Object.assign({ o: C(k * 3), s: L(.6, 1, eb(k)) }, extra)); return k; }
 function rng(seed) { let s = seed * 9301 + 49297; return () => { s = (s * 9301 + 49297) % 233280; return s / 233280; }; }
+function hash(i, j) { let h = (i * 374761393 + j * 668265263) | 0; h = Math.imul(h ^ (h >>> 13), 1274126177); h ^= h >>> 16; return (h >>> 0) / 4294967296; }
 const fmt = n => Math.round(n).toLocaleString('en-US');
 
 const ICON = {
   check: c => `<svg viewBox="0 0 24 24" width="26" height="26"><path d="M5 12.5l4.5 4.5L19 7.5" fill="none" stroke="${c}" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/></svg>`,
-  lock: `<svg viewBox="0 0 24 24" width="34" height="34"><rect x="5" y="10.5" width="14" height="10" rx="2.5" fill="none" stroke="#5EE8D4" stroke-width="2"/><path d="M8.5 10.5V8a3.5 3.5 0 0 1 7 0v2.5" fill="none" stroke="#5EE8D4" stroke-width="2"/></svg>`,
-  shield: `<svg viewBox="0 0 24 24" width="36" height="36"><path d="M12 3l7 3v5.5c0 4.5-3 8-7 9.5-4-1.5-7-5-7-9.5V6z" fill="none" stroke="#5EE8D4" stroke-width="2" stroke-linejoin="round"/><path d="M8.8 12.2l2.2 2.2 4.4-4.6" fill="none" stroke="#5EE8D4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>`,
+  lock: `<svg viewBox="0 0 24 24" width="32" height="32"><rect x="5" y="10.5" width="14" height="10" rx="2.5" fill="none" stroke="#5EE8D4" stroke-width="2"/><path d="M8.5 10.5V8a3.5 3.5 0 0 1 7 0v2.5" fill="none" stroke="#5EE8D4" stroke-width="2"/></svg>`,
+  shield: `<svg viewBox="0 0 24 24" width="40" height="40"><path d="M12 3l7 3v5.5c0 4.5-3 8-7 9.5-4-1.5-7-5-7-9.5V6z" fill="none" stroke="#5EE8D4" stroke-width="2" stroke-linejoin="round"/><path d="M8.8 12.2l2.2 2.2 4.4-4.6" fill="none" stroke="#5EE8D4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>`,
   down: c => `<svg viewBox="0 0 24 24" width="24" height="24"><path d="M12 4v11m0 0l-4.5-4.5M12 15l4.5-4.5M5 19.5h14" fill="none" stroke="${c}" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>`,
+  search: `<svg viewBox="0 0 24 24" width="46" height="46"><circle cx="10.5" cy="10.5" r="6.5" fill="none" stroke="#8A93A3" stroke-width="2.2"/><path d="M15.5 15.5L20 20" stroke="#8A93A3" stroke-width="2.4" stroke-linecap="round"/></svg>`,
 };
 function logo(parent, size, css) {
   const g = el('div', 'logo abs', css, null, parent);
@@ -93,142 +101,211 @@ function logo(parent, size, css) {
   return g;
 }
 
-const SC = [[0, 4.39], [4.39, 7.09], [7.09, 10.37], [10.37, 13.64], [13.64, 16.93], [16.93, 19.66], [19.66, 23.5]];
-const GLOW = [[960, 660], [960, 520], [680, 600], [960, 620], [620, 590], [960, 560], [960, 520]];
-const scenes = SC.map(() => el('div', 'scene'));
+// ---------- browser factory (hook + callback) ----------
+const QUERY = 'operations manager jobs near me';
+const TITLES = [QUERY, 'Job search – page 2', 'Supply Chain Lead · Remote', 'Careers | Northwind Health', 'Program Manager – Hybrid', 'Jobs near me', 'Director of Operations', 'Openings | Halcyon Foods', 'Job search – page 3', 'Ops roles within 50 mi', 'Careers | Lakeshore Logistics', 'Saved jobs (14)', 'Job search – page 4', 'Operations Lead – IL', 'Careers | Aster Manufacturing', 'Job alert: 212 new jobs', 'Program Manager jobs', 'Job search – page 5', 'Senior Ops Manager', 'Open roles – Careers'];
+const FAV = ['#3B82F6', '#F59E0B', '#8B5CF6', '#10B981', '#EF4444', '#64748B', '#EC4899', '#14B8A6'];
+function makeBrowser(parent) {
+  const B = {};
+  B.br = el('div', 'abs card', { left: '210px', top: '350px', width: '1500px', height: '640px', overflow: 'hidden', borderRadius: '22px', transformOrigin: '50% 50%' }, null, parent);
+  const tbar = el('div', 'abs', { left: 0, top: 0, right: 0, height: '60px', background: '#07090E' }, null, B.br);
+  [0, 1, 2].forEach(i => el('div', 'abs', { left: 24 + i * 22 + 'px', top: '23px', width: '13px', height: '13px', borderRadius: '50%', background: '#262C37' }, null, tbar));
+  B.tabs = TITLES.map((title, i) => {
+    const tb = el('div', 'abs', { top: '10px', height: '50px', borderRadius: '12px 12px 0 0', overflow: 'hidden', display: 'flex', alignItems: 'center', padding: '0 14px', gap: '10px', whiteSpace: 'nowrap' }, null, tbar);
+    const fav = el('div', null, { width: '16px', height: '16px', borderRadius: '4px', background: FAV[i % FAV.length], flex: 'none', color: '#05110F', fontSize: '12px', fontWeight: 800, display: 'flex', alignItems: 'center', justifyContent: 'center' }, null, tb);
+    const tt = el('div', null, { fontSize: '17px', color: '#AAB2BF', overflow: 'hidden', textOverflow: 'ellipsis', flex: '1 1 auto', minWidth: 0 }, title, tb);
+    return { tb, fav, tt };
+  });
+  B.badge = el('div', 'abs', { right: '18px', top: '13px', height: '34px', minWidth: '52px', padding: '0 12px', borderRadius: '10px', background: 'rgba(94,232,212,.14)', color: '#5EE8D4', fontSize: '20px', fontWeight: 700, display: 'flex', alignItems: 'center', justifyContent: 'center', fontVariantNumeric: 'tabular-nums' }, '0', tbar);
+  const url = el('div', 'abs', { left: 0, right: 0, top: '60px', height: '58px', background: '#0F141D' }, null, B.br);
+  B.urlPill = el('div', 'abs', { left: '24px', right: '24px', top: '11px', height: '36px', borderRadius: '18px', background: '#070A10', display: 'flex', alignItems: 'center', padding: '0 20px', fontSize: '18px', color: '#AAB2BF' }, QUERY, url);
+  B.page = el('div', 'abs', { left: 0, right: 0, top: '118px', bottom: 0 }, null, B.br);
+  B.skel = []; for (let i = 0; i < 6; i++) B.skel.push(el('div', 'skel', { left: '36px', top: 40 + i * 52 + 'px', height: '22px' }, null, B.page));
+  B.jobRows = [];
+  for (let i = 0; i < 4; i++) {
+    const r = el('div', 'abs', { left: '330px', right: '40px', top: 34 + i * 118 + 'px', height: '100px', borderRadius: '16px', background: 'rgba(255,255,255,.035)' }, null, B.page);
+    B.jobRows.push([el('div', 'skel', { left: '28px', top: '22px', height: '22px', background: 'rgba(255,255,255,.14)' }, null, r), el('div', 'skel', { left: '28px', top: '60px', height: '16px' }, null, r), el('div', 'skel', { right: '28px', top: '34px', height: '32px', width: '130px', borderRadius: '16px' }, null, r)]);
+  }
+  B.mini = el('div', 'abs', { left: '80px', right: '80px', top: '40px', opacity: 0 }, null, B.page);
+  [['Operations Manager', 'Northwind Health · Chicago', 94], ['Supply Chain Lead', 'Halcyon Foods · Remote', 89], ['Program Manager', 'Lakeshore Logistics · Hybrid', 83], ['Director of Operations', 'Aster Manufacturing · On-site', 71]].forEach((r, i) => {
+    el('div', null, { position: 'relative', height: '96px', marginBottom: '16px', borderRadius: '16px', background: '#0C1018', border: `1.5px solid ${i ? 'rgba(255,255,255,.07)' : 'rgba(94,232,212,.5)'}` },
+      `<div style="position:absolute;left:30px;top:18px;font-size:30px;font-weight:650">${r[0]}</div><div style="position:absolute;left:30px;top:58px;font-size:19px;color:#8A93A3">${r[1]}</div><div style="position:absolute;right:30px;top:22px;font-size:44px;font-weight:700;color:#5EE8D4">${r[2]}</div>`, B.mini);
+  });
+  return B;
+}
+function layoutTabs(B, ks, active) {
+  const n = ks.reduce((a, b) => a + b, 0);
+  const w = Math.min(250, 1250 / Math.max(1, n));
+  let x = 100;
+  B.tabs.forEach(({ tb }, i) => {
+    const k = ks[i];
+    tb.style.left = x + 'px'; tb.style.width = Math.max(0, w * k - 2) + 'px'; tb.style.opacity = C(k * 1.5);
+    tb.style.background = i === active ? '#0F141D' : 'transparent'; tb.style.padding = w < 90 ? '0 10px' : '0 14px';
+    x += w * k;
+  });
+  B.badge.textContent = ks.filter(k => k > .5).length;
+  const r = rng(3 + Math.max(0, active));
+  B.skel.forEach(s => { s.style.width = 120 + r() * 140 + 'px'; });
+  B.jobRows.forEach(([a, b]) => { a.style.width = 280 + r() * 380 + 'px'; b.style.width = 180 + r() * 260 + 'px'; });
+}
 
-// Small corner logo, as in the original video
+// ---------- canvas: the field of listings ----------
+const cv = document.getElementById('field'), ctx = cv.getContext('2d');
+const TW = 1500, TH = 640, GX = 1600, GY = 740, Z_END = .012;
+const camZ = t => t < 2.62 ? 1 : Math.exp(L(0, Math.log(Z_END), eio(P(t, 2.62, 4.1))));
+const camCY = t => L(670, 540, eio(P(t, 2.62, 3.6)));
+const ROW_Y = i => 340 + i * 132;
+function drawField(t) {
+  ctx.clearRect(0, 0, 1920, 1080);
+  if (t < 2.62 || t >= 13.2) return;
+  const zz = camZ(t) * (t > 4.1 ? 1 + .05 * P(t, 4.1, 12) : 1), cy = camCY(t);
+  const sx = GX * zz, sy = GY * zz, w = TW * zz, h = TH * zz;
+  const nx = Math.ceil(960 / sx) + 1, ny = Math.ceil(540 / sy) + 1;
+  const R = t >= 4.62 ? eo(P(t, 4.62, 5.7)) * 1250 : -1;
+  const fieldA = C(P(t, 2.62, 2.9)) * (t < 7.62 ? 1 : L(1, .3, P(t, 7.62, 8.4))) * (1 - P(t, 12.62, 13.0));
+  const big = w > 34;
+  const fits = [];
+  for (let j = -ny; j <= ny; j++) for (let i = -nx; i <= nx; i++) {
+    if (i === 0 && j === 0 && t < 4.0) continue;
+    const x = 960 + i * sx, y = cy + j * sy;
+    const fit = hash(i, j) < .022;
+    const d = Math.hypot(x - 960, y - 540);
+    let a = .9, lit = 0;
+    if (R >= 0 && d < R) { if (fit) { fits.push([x, y, i, j, d]); continue; } a = .3; }
+    if (R >= 0 && Math.abs(d - R) < 60) lit = 1 - Math.abs(d - R) / 60;
+    ctx.globalAlpha = Math.max(a, lit * .9) * fieldA;
+    ctx.fillStyle = lit > .05 ? `rgb(${L(27, 94, lit)},${L(35, 232, lit)},${L(50, 212, lit)})` : '#1B2332';
+    if (big) {
+      ctx.beginPath(); ctx.roundRect(x - w / 2, y - h / 2, w, h, 22 * zz); ctx.fill();
+      ctx.fillStyle = '#07090E'; ctx.fillRect(x - w / 2, y - h / 2, w, 60 * zz);
+      ctx.fillStyle = 'rgba(255,255,255,.08)';
+      for (let k = 0; k < 4; k++) ctx.fillRect(x - w / 2 + 330 * zz, y - h / 2 + (152 + k * 118) * zz, (500 + hash(i + k, j) * 400) * zz, 22 * zz);
+    } else ctx.fillRect(x - w / 2, y - h / 2, w, h);
+  }
+  ctx.fillStyle = '#5EE8D4'; ctx.shadowColor = 'rgba(94,232,212,.85)'; ctx.shadowBlur = 16;
+  for (const [x, y, i, j, d] of fits) {
+    let px = x, py = y, s = 1.3, a = 1;
+    if (t >= 7.62) {
+      const ri = Math.floor(hash(i + 999, j - 77) * 4);
+      const tx = 400 + hash(i - 31, j + 513) * 1120, ty = ROW_Y(ri) + 18 + hash(i + 7, j + 7) * 76;
+      const ts = 7.66 + hash(i + 3, j - 3) * .3 + Math.min(1, d / 1300) * .35;
+      const k = eio(P(t, ts, ts + .6));
+      px = L(x, tx, k); py = L(y, ty, k); s = L(1.3, .55, k); a *= 1 - P(t, ts + .5, ts + .72);
+      if (a <= 0) continue;
+    }
+    ctx.globalAlpha = a * (1 - P(t, 12.62, 13.0));
+    ctx.fillRect(px - w * s / 2, py - h * s / 2, w * s, h * s);
+  }
+  ctx.shadowBlur = 0;
+  if (R > 0 && R < 1250) {
+    ctx.globalAlpha = .75 * (1 - R / 1250); ctx.strokeStyle = '#5EE8D4'; ctx.lineWidth = 4;
+    ctx.beginPath(); ctx.arc(960, 540, R, 0, Math.PI * 2); ctx.stroke();
+  }
+  ctx.globalAlpha = 1;
+}
+
+// ---------- corner logo ----------
 const corner = logo($s, 26, { left: '48px', top: '40px', zIndex: 5 });
 
-// ---------- Scene 1: hook ----------
-const s1 = scenes[0];
-const h1a = el('div', 'abs', { left: 0, right: 0, top: '96px', textAlign: 'center', fontSize: '112px', fontWeight: 750, letterSpacing: '-.035em' }, 'twenty tabs.', s1);
-const h1b = el('div', 'abs', { left: 0, right: 0, top: '236px', textAlign: 'center', fontSize: '62px', fontWeight: 650, letterSpacing: '-.025em', color: '#B4BCC8' }, 'one resume, rewritten every time.', s1);
-const br = el('div', 'abs card', { left: '210px', top: '350px', width: '1500px', height: '640px', overflow: 'hidden', borderRadius: '22px' }, null, s1);
-const tbar = el('div', 'abs', { left: 0, top: 0, right: 0, height: '60px', background: '#07090E' }, null, br);
-[0, 1, 2].forEach(i => el('div', 'abs', { left: 24 + i * 22 + 'px', top: '23px', width: '13px', height: '13px', borderRadius: '50%', background: '#262C37' }, null, tbar));
-const TITLES = ['Operations Manager jobs – Chicago', 'Job search – page 2', 'Supply Chain Lead · Remote', 'Careers | Northwind Health', 'Program Manager – Hybrid', 'Jobs near me', 'Director of Operations', 'Openings | Halcyon Foods', 'Job search – page 3', 'Ops roles within 50 mi', 'Careers | Lakeshore Logistics', 'Saved jobs (14)', 'Job search – page 4', 'Operations Lead – IL', 'Careers | Aster Manufacturing', 'Job alert: 212 new jobs', 'Program Manager jobs', 'Job search – page 5', 'Senior Ops Manager', 'Open roles – Careers'];
-const FAV = ['#3B82F6', '#F59E0B', '#8B5CF6', '#10B981', '#EF4444', '#64748B', '#EC4899', '#14B8A6'];
-const TAB_T = TITLES.map((_, i) => .25 + 1.6 * Math.pow(i / 19, .62));
-const tabs = TITLES.map((title, i) => {
-  const tb = el('div', 'abs', { top: '10px', height: '50px', borderRadius: '12px 12px 0 0', overflow: 'hidden', display: 'flex', alignItems: 'center', padding: '0 14px', gap: '10px', whiteSpace: 'nowrap' }, null, tbar);
-  el('div', null, { width: '16px', height: '16px', borderRadius: '4px', background: FAV[i % FAV.length], flex: 'none' }, null, tb);
-  el('div', null, { fontSize: '17px', color: '#AAB2BF', overflow: 'hidden', textOverflow: 'ellipsis', flex: '1 1 auto', minWidth: 0 }, title, tb);
-  return tb;
-});
-const badge = el('div', 'abs', { right: '18px', top: '13px', height: '34px', minWidth: '52px', padding: '0 12px', borderRadius: '10px', background: 'rgba(94,232,212,.14)', color: '#5EE8D4', fontSize: '20px', fontWeight: 700, display: 'flex', alignItems: 'center', justifyContent: 'center', fontVariantNumeric: 'tabular-nums' }, '0', tbar);
-const url = el('div', 'abs', { left: 0, right: 0, top: '60px', height: '58px', background: '#0F141D' }, null, br);
-el('div', 'abs', { left: '24px', right: '24px', top: '11px', height: '36px', borderRadius: '18px', background: '#070A10' }, null, url);
-const page = el('div', 'abs', { left: 0, right: 0, top: '118px', bottom: 0 }, null, br);
-const skel = [];
-for (let i = 0; i < 6; i++) skel.push(el('div', 'skel', { left: '36px', top: 40 + i * 52 + 'px', height: '22px' }, null, page));
-const jobRows = [];
-for (let i = 0; i < 4; i++) {
-  const r = el('div', 'abs', { left: '330px', right: '40px', top: 34 + i * 118 + 'px', height: '100px', borderRadius: '16px', background: 'rgba(255,255,255,.035)' }, null, page);
-  jobRows.push([el('div', 'skel', { left: '28px', top: '22px', height: '22px', background: 'rgba(255,255,255,.14)' }, null, r), el('div', 'skel', { left: '28px', top: '60px', height: '16px' }, null, r), el('div', 'skel', { right: '28px', top: '34px', height: '32px', width: '130px', borderRadius: '16px' }, null, r)]);
-}
-const resWrap = el('div', 'abs', { left: '1250px', top: '440px', width: '420px' }, null, s1);
-const fname = el('div', null, { display: 'inline-flex', alignItems: 'center', height: '46px', padding: '0 18px', borderRadius: '12px', background: '#161D29', border: '1px solid rgba(255,255,255,.1)', fontSize: '22px', fontWeight: 600, color: '#E6EAF0', whiteSpace: 'nowrap', marginBottom: '14px' }, '', resWrap);
-const res1 = el('div', 'card', { position: 'relative', width: '400px', height: '500px', padding: '38px 34px', borderRadius: '22px', background: '#111620' }, null, resWrap);
-el('div', null, { fontSize: '28px', fontWeight: 700, marginBottom: '6px' }, 'Sample Candidate', res1);
-el('div', null, { fontSize: '19px', color: '#8A93A3', marginBottom: '28px' }, 'Operations · 9 years', res1);
-const res1Lines = [];
-for (let i = 0; i < 14; i++) res1Lines.push(el('div', 'line', { marginBottom: i % 5 === 4 ? '26px' : '14px' }, null, res1));
-const FILES = ['resume.docx', 'resume_v2.docx', 'resume_v2_ops.docx', 'resume_FINAL.docx', 'resume_FINAL_v2.docx', 'resume_FINAL_v7_actually_final.docx'];
-const FILE_T = [1.95, 2.4, 2.8, 3.15, 3.45, 3.72];
+// ---------- 1+2: cold open & pull-back ----------
+const gHook = el('div', 'abs', { inset: 0 });
+const B1 = makeBrowser(gHook);
+B1.urlPill.textContent = '';
+const search = el('div', 'abs', { left: '310px', top: '476px', width: '1300px', height: '128px', borderRadius: '64px', background: '#0C1018', border: '1.5px solid rgba(94,232,212,.45)', boxShadow: '0 0 60px rgba(94,232,212,.12), 0 30px 90px rgba(0,0,0,.6)', display: 'flex', alignItems: 'center', padding: '0 40px', gap: '22px', overflow: 'hidden', whiteSpace: 'nowrap' }, null, gHook);
+const sIcon = el('div', null, { flex: 'none', display: 'flex' }, ICON.search, search);
+const sText = el('div', null, { fontSize: '56px', fontWeight: 500, letterSpacing: '-.01em' }, '', search);
+const caret = el('div', null, { width: '4px', height: '64px', background: '#5EE8D4', marginLeft: '-16px', flex: 'none' }, null, search);
+const CHAR_T = [...QUERY].map((_, c) => .22 + c * .034);
+const TAB_T = TITLES.map((_, i) => i === 0 ? 1.62 : 1.78 + .8 * Math.pow((i - 1) / 18, .6));
+const hTabs = el('div', 'abs halo', { left: 0, right: 0, top: '96px', textAlign: 'center', fontSize: '120px', fontWeight: 800, letterSpacing: '-.04em' }, 'twenty tabs.', gHook);
+const hJobs = el('div', 'abs halo', { left: 0, right: 0, top: '380px', textAlign: 'center' }, null, gHook);
+const jobsBack = el('div', 'abs', { left: '260px', top: '-120px', width: '1400px', height: '560px', background: 'radial-gradient(closest-side,rgba(5,6,12,.92),rgba(5,6,12,.75) 60%,rgba(5,6,12,0))' }, null, hJobs);
+const jobsNum = el('div', null, { position: 'relative', fontSize: '190px', fontWeight: 800, letterSpacing: '-.05em', lineHeight: 1, color: '#5EE8D4', fontVariantNumeric: 'tabular-nums' }, '0', hJobs);
+const jobsLbl = el('div', null, { position: 'relative', fontSize: '64px', fontWeight: 700, letterSpacing: '-.03em', marginTop: '14px' }, 'open jobs.', hJobs);
 
-// ---------- Scene 2: reveal ----------
-const s2 = scenes[1];
-const lg2 = logo(s2, 84, { left: 0, right: 0, top: '250px', justifyContent: 'center' });
-const lg2tile = lg2.children[0];
-const lg2word = [lg2.children[1], lg2.children[2]];
-const h2a = el('div', 'abs', { left: 0, right: 0, top: '470px', textAlign: 'center', fontSize: '120px', fontWeight: 750, letterSpacing: '-.04em' }, 'stop searching.', s2);
-const h2b = el('div', 'abs mint', { left: 0, right: 0, top: '618px', textAlign: 'center', fontSize: '120px', fontWeight: 750, letterSpacing: '-.04em' }, 'read the ones that fit.', s2);
-
-// ---------- Scene 3: upload ----------
-const s3 = scenes[2];
-const e3 = el('div', 'eyebrow', null, '01 · upload', s3);
-const h3 = el('div', 'head', null, 'drop in your resume.', s3);
-const zone = el('div', 'abs', { left: '430px', top: '300px', width: '470px', height: '580px', borderRadius: '32px', border: '2.5px dashed rgba(94,232,212,.4)' }, null, s3);
-const zoneLbl = el('div', 'abs muted', { left: 0, right: 0, bottom: '26px', textAlign: 'center', fontSize: '22px', fontWeight: 500 }, 'drop your resume here', zone);
-const res3 = el('div', 'abs card', { left: '465px', top: '335px', width: '400px', height: '510px', padding: '40px 36px', borderRadius: '22px', background: '#111620', overflow: 'hidden' }, null, s3);
-el('div', null, { fontSize: '30px', fontWeight: 700, marginBottom: '6px' }, 'Sample Candidate', res3);
-el('div', null, { fontSize: '20px', color: '#8A93A3', marginBottom: '30px' }, 'Operations · 9 years · Chicago', res3);
-const r3r = rng(7);
-const res3Lines = [];
-for (let i = 0; i < 14; i++) res3Lines.push(el('div', 'line', { width: 40 + r3r() * 60 + '%', marginBottom: i % 5 === 4 ? '26px' : '14px' }, null, res3));
-const scan = el('div', 'abs', { left: '465px', width: '400px', height: '4px', top: '335px', background: '#5EE8D4', boxShadow: '0 0 24px 6px rgba(94,232,212,.55)', borderRadius: '2px', opacity: 0 }, null, s3);
-const chipHd = el('div', 'abs muted', { left: '980px', top: '326px', fontSize: '24px', fontWeight: 600, letterSpacing: '.02em' }, 'found in your resume', s3);
-const chipBox = el('div', 'abs', { left: '980px', top: '380px', width: '560px' }, null, s3);
+// ---------- 3: drop ----------
+const gDrop = el('div', 'abs', { inset: 0 });
+const e3 = el('div', 'eyebrow halo', null, '01 · upload', gDrop);
+const h3 = el('div', 'head halo', null, 'drop in your resume.', gDrop);
+const res = el('div', 'abs card', { left: '810px', top: '380px', width: '300px', height: '390px', padding: '32px 28px', borderRadius: '20px', background: '#111620', border: '1.5px solid rgba(94,232,212,.55)', boxShadow: '0 0 80px rgba(94,232,212,.25), 0 30px 90px rgba(0,0,0,.7)' }, null, gDrop);
+el('div', null, { fontSize: '25px', fontWeight: 700, marginBottom: '4px' }, 'Sample Candidate', res);
+el('div', null, { fontSize: '16px', color: '#8A93A3', marginBottom: '24px' }, 'Operations · 9 years · Chicago', res);
+{ const r = rng(7); for (let i = 0; i < 12; i++) el('div', 'line', { width: 40 + r() * 60 + '%', height: '8px', marginBottom: i % 4 === 3 ? '20px' : '12px' }, null, res); }
 const CHIPS = ['Team leadership', 'Budgeting', 'Logistics', 'Vendor management', 'Process improvement', 'Excel', 'Senior level', 'Chicago · Hybrid'];
-const chips = CHIPS.map(c => el('div', 'chip', { opacity: 0 }, c, chipBox));
-const lock3 = el('div', 'abs', { left: '980px', top: '800px', display: 'flex', alignItems: 'center', gap: '14px', fontSize: '28px', fontWeight: 600, color: '#DDE2E9' }, ICON.lock + '<span>never sold. never sent to employers.</span>', s3);
+const chips = CHIPS.map(c => el('div', 'chip', null, c, gDrop));
+const lock3 = el('div', 'abs halo', { left: 0, right: 0, top: '968px', display: 'flex', justifyContent: 'center', alignItems: 'center', gap: '12px', fontSize: '28px', fontWeight: 600, color: '#DDE2E9' }, ICON.lock + '<span>never sold. never sent to employers.</span>', gDrop);
 
-// ---------- Scene 4: ranked ----------
-const s4 = scenes[3];
-const e4 = el('div', 'eyebrow', null, '02 · ranked', s4);
-const h4 = el('div', 'head', null, 'live openings, ranked for you.', s4);
-const cnt4 = el('div', 'abs', { left: 0, right: 0, top: '258px', textAlign: 'center', fontSize: '30px', fontWeight: 550, color: '#8A93A3' }, null, s4);
-cnt4.innerHTML = 'ranked from <b class="mint" id="c4a" style="font-weight:700">0</b> open jobs · <b class="mint" id="c4b" style="font-weight:700">0</b> employers';
-const c4a = document.getElementById('c4a'), c4b = document.getElementById('c4b');
-const rowBox = el('div', 'abs', { left: '360px', top: '340px', width: '1200px', height: '540px' }, null, s4);
+// ---------- 4+5: ranked + the gag ----------
+const gList = el('div', 'abs', { inset: 0 });
+const e4 = el('div', 'eyebrow', null, '02 · ranked', gList);
+const h4 = el('div', 'head', null, 'live openings, ranked for you.', gList);
+const cnt4 = el('div', 'abs', { left: 0, right: 0, top: '250px', textAlign: 'center', fontSize: '30px', fontWeight: 550, color: '#8A93A3' }, 'from <b class="mint" style="font-weight:700">2,000,000+</b> open jobs · <b class="mint" style="font-weight:700">45,000</b> employers', gList);
+const rowBox = el('div', 'abs', { left: '360px', top: '340px', width: '1200px', height: '540px' }, null, gList);
 const ROWS = [['Operations Manager', 'Northwind Health · Chicago', 94], ['Supply Chain Lead', 'Halcyon Foods · Remote', 89], ['Program Manager', 'Lakeshore Logistics · Hybrid', 83], ['Director of Operations', 'Aster Manufacturing · On-site', 71]];
 const rows = ROWS.map((r, i) => {
   const e = el('div', 'row', { top: i * 132 + 'px' }, `<div class="t">${r[0]}</div><div class="s">${r[1]}</div><div class="track"><div class="fill"></div></div><div class="n">0</div>`, rowBox);
   return { e, fill: e.querySelector('.fill'), n: e.querySelector('.n'), v: r[2] };
 });
-const top4 = el('div', 'pill', { left: '420px', top: '26px', opacity: 0 }, 'top match', rows[0].e);
+const top4 = el('div', 'pill', { left: '420px', top: '26px' }, 'top match', rows[0].e);
+const promo = el('div', 'abs', { left: '610px', top: '220px', width: '700px', height: '104px', borderRadius: '20px', background: '#1A1508', border: '2px solid #F5C451', boxShadow: '0 0 50px rgba(245,196,81,.25), 0 20px 60px rgba(0,0,0,.6)', zIndex: 3 },
+  `<div style="position:absolute;left:28px;top:18px;font-size:32px;font-weight:700;color:#FFE7A8">Totally Great Opportunity</div><div style="position:absolute;left:28px;top:60px;font-size:20px;font-weight:600;color:#F5C451;letter-spacing:.06em;text-transform:uppercase">promoted · paid to rank #1</div><div style="position:absolute;right:26px;top:22px;font-size:44px;font-weight:800;color:#F5C451">$$$</div>`, gList);
+const nope = el('div', 'abs', { left: '1330px', top: '236px', height: '64px', padding: '0 22px', borderRadius: '16px', background: '#2A0E12', border: '2px solid #FF6B6B', color: '#FF8A8A', fontSize: '28px', fontWeight: 750, display: 'flex', alignItems: 'center', zIndex: 4, whiteSpace: 'nowrap' }, 'not for sale', gList);
+const pay = el('div', 'abs', { left: 0, right: 0, top: '900px', display: 'flex', justifyContent: 'center', alignItems: 'center', gap: '14px', fontSize: '44px', fontWeight: 750, letterSpacing: '-.02em' }, ICON.shield + '<span>employers can’t pay to rank higher.</span>', gList);
+const big94 = el('div', 'abs mint', { left: 0, top: 0, width: '800px', height: '520px', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '520px', fontWeight: 750, letterSpacing: '-.05em', lineHeight: 1, fontVariantNumeric: 'tabular-nums', zIndex: 20, textShadow: '0 0 80px rgba(94,232,212,.45)' }, '94', $s);
 
-// ---------- Scene 5: why it matched ----------
-const s5 = scenes[4];
-const e5 = el('div', 'eyebrow', null, '03 · why it matched', s5);
-const h5 = el('div', 'head', null, 'see exactly why a role scored.', s5);
-const card5 = el('div', 'abs card', { left: '300px', top: '320px', width: '560px', height: '520px', padding: '52px 54px', border: '1.5px solid rgba(94,232,212,.45)', boxShadow: '0 0 60px rgba(94,232,212,.14), 0 30px 90px rgba(0,0,0,.55)' }, null, s5);
-el('div', 'muted', { fontSize: '26px', fontWeight: 500 }, 'Northwind Health · Chicago', card5);
-el('div', null, { fontSize: '54px', fontWeight: 700, lineHeight: 1.08, letterSpacing: '-.02em', marginTop: '10px' }, 'Operations<br>Manager', card5);
-const score5 = el('div', 'mint', { fontSize: '170px', fontWeight: 750, letterSpacing: '-.05em', lineHeight: 1, marginTop: '34px', fontVariantNumeric: 'tabular-nums' }, '0', card5);
-el('div', 'muted', { fontSize: '26px', marginTop: '14px' }, 'overall match', card5);
+// ---------- 6: why it matched ----------
+const gWhy = el('div', 'abs', { inset: 0 });
+const e6 = el('div', 'eyebrow', null, '03 · why it matched', gWhy);
+const h6 = el('div', 'head', null, 'see exactly why a role scored.', gWhy);
+const card6 = el('div', 'abs card', { left: '300px', top: '320px', width: '560px', height: '520px', padding: '52px 54px', border: '1.5px solid rgba(94,232,212,.45)', boxShadow: '0 0 60px rgba(94,232,212,.14), 0 30px 90px rgba(0,0,0,.55)' }, null, gWhy);
+el('div', 'muted', { fontSize: '26px', fontWeight: 500 }, 'Northwind Health · Chicago', card6);
+el('div', null, { fontSize: '54px', fontWeight: 700, lineHeight: 1.08, letterSpacing: '-.02em', marginTop: '10px' }, 'Operations<br>Manager', card6);
+const score6 = el('div', 'mint', { display: 'inline-block', fontSize: '170px', fontWeight: 750, letterSpacing: '-.05em', lineHeight: 1, marginTop: '34px', fontVariantNumeric: 'tabular-nums' }, '94', card6);
+el('div', 'muted', { fontSize: '26px', marginTop: '14px' }, 'overall match', card6);
 const BARS = [['Skills overlap', 96], ['Title alignment', 92], ['Seniority', 90], ['Location fit', 100]];
-const bars5 = BARS.map((b, i) => {
-  const e = el('div', 'bar', { left: '960px', top: 350 + i * 118 + 'px' }, `<div class="l">${b[0]}</div><div class="v">0</div><div class="track"><div class="fill"></div></div>`, s5);
-  return { e, fill: e.querySelector('.fill'), v: e.querySelector('.v'), val: b[1] };
+const bars = BARS.map((b, i) => {
+  const e = el('div', 'bar', { top: 350 + i * 118 + 'px' }, `<div class="l">${b[0]}</div><div class="v">0</div><div class="track"><div class="fill"></div></div>`, gWhy);
+  return { e, l: e.querySelector('.l'), v: e.querySelector('.v'), fill: e.querySelector('.fill'), val: b[1] };
 });
-const pay5 = el('div', 'abs', { left: 0, right: 0, top: '906px', display: 'flex', justifyContent: 'center', alignItems: 'center', gap: '14px', fontSize: '38px', fontWeight: 650, letterSpacing: '-.01em' }, ICON.shield + '<span>employers can’t pay to rank higher.</span>', s5);
 
-// ---------- Scene 6: documents ----------
-const s6 = scenes[5];
-const e6 = el('div', 'eyebrow', null, '04 · tailored documents', s6);
-const h6 = el('div', 'head', null, 'two resumes and a cover letter, per role.', s6);
-const DOCS = [['Resume', 'for applicant tracking systems', '.docx'], ['Resume', 'for hiring teams', '.pdf'], ['Cover letter', 'written for this role', '.pdf']];
+// ---------- 7: mitosis ----------
+const gDocs = el('div', 'abs', { inset: 0 });
+const e7 = el('div', 'eyebrow', null, '04 · tailored documents', gDocs);
+const h7 = el('div', 'head', null, 'two resumes and a cover letter, per role.', gDocs);
 const DOC_X = [286, 750, 1214];
+const DOCS = [['Resume', 'for applicant tracking systems', '.docx'], ['Resume', 'for hiring teams', '.pdf'], ['Cover letter', 'written for this role', '.pdf']];
 const docs = DOCS.map((d, i) => {
-  const e = el('div', 'doc card', { left: DOC_X[i] + 'px', top: '300px' }, `<div class="dt">${d[0]}</div><div class="ds">${d[1]}</div>`, s6);
+  const e = el('div', 'doc card', { left: DOC_X[1] + 'px', zIndex: 3 - i }, `<div class="dt">${d[0]}</div>`, gDocs);
+  const ds = el('div', 'ds', null, d[1], e);
   const rr = rng(11 + i);
   for (let k = 0; k < 11; k++) el('div', 'line', { width: 45 + rr() * 55 + '%', marginBottom: k % 4 === 3 ? '24px' : '14px' }, null, e);
-  const b = el('div', 'btn', null, ICON.down('#5EE8D4') + `<span>download ${d[2]}</span>`, e);
-  return { e, b, ext: d[2] };
+  const b = el('div', 'btn', null, '', e);
+  return { e, ds, b, ext: d[2] };
 });
-const CLICK6 = [17.85, 18.2, 18.56];
-const toast = el('div', 'abs', { left: 0, right: 0, top: '884px', display: 'flex', justifyContent: 'center' }, null, s6);
-el('div', null, { display: 'flex', alignItems: 'center', gap: '12px', height: '64px', padding: '0 28px', borderRadius: '18px', background: '#141B26', border: '1px solid rgba(94,232,212,.35)', fontSize: '26px', fontWeight: 600 }, ICON.check('#5EE8D4') + '<span>3 files downloaded</span>', toast);
+const CLICK7 = [18.12, 18.37, 18.62];
 
-// ---------- Scene 7: CTA ----------
-const s7 = scenes[6];
-const lg7 = logo(s7, 64, { left: 0, right: 0, top: '270px', justifyContent: 'center' });
-const h7 = el('div', 'abs', { left: 0, right: 0, top: '400px', textAlign: 'center', fontSize: '104px', fontWeight: 750, letterSpacing: '-.04em' }, 'a job search tailored to you.', s7);
-const ctaWrap = el('div', 'abs', { left: 0, right: 0, top: '600px', display: 'flex', justifyContent: 'center' }, null, s7);
+// ---------- 8: callback ----------
+const gTabs = el('div', 'abs', { inset: 0 });
+const h8 = el('div', 'abs', { left: 0, right: 0, top: '130px', textAlign: 'center', fontSize: '96px', fontWeight: 800, letterSpacing: '-.04em' }, 'now close the other nineteen.', gTabs);
+const B2 = makeBrowser(gTabs);
+const CLOSE_T = Array.from({ length: 19 }, (_, k) => 19.55 + 1.0 * Math.pow(k / 18, .7));
+
+// ---------- 9: CTA ----------
+const gCta = el('div', 'abs', { inset: 0 });
+const lg9 = logo(gCta, 64, { left: 0, right: 0, top: '270px', justifyContent: 'center' });
+const h9 = el('div', 'abs', { left: 0, right: 0, top: '400px', textAlign: 'center', fontSize: '104px', fontWeight: 800, letterSpacing: '-.04em' }, 'a job search tailored to you.', gCta);
+const ctaWrap = el('div', 'abs', { left: 0, right: 0, top: '600px', display: 'flex', justifyContent: 'center' }, null, gCta);
 const cta = el('div', 'cta', null, 'Find my matches', ctaWrap);
-const foot7 = el('div', 'abs muted', { left: 0, right: 0, top: '750px', textAlign: 'center', fontSize: '30px', fontWeight: 500 }, 'free during beta · bespokejobs.ai', s7);
+const foot9 = el('div', 'abs muted', { left: 0, right: 0, top: '750px', textAlign: 'center', fontSize: '30px', fontWeight: 500 }, 'free during beta · bespokejobs.ai', gCta);
 
 // ---------- cursor ----------
 const cursor = el('div', null, null, `<svg viewBox="0 0 24 24" width="52" height="52"><path d="M4.5 2.5 L4.5 19.5 L9 15.3 L12 22 L15 20.7 L12.1 14.2 L18.5 14.2 Z" fill="#fff" stroke="#05060C" stroke-width="1.3" stroke-linejoin="round"/></svg>`);
 cursor.id = 'cursor';
 const ripple = el('div'); ripple.id = 'ripple';
-// [time, x, y] keyframes and click times per scene
 const CUR = [
-  { k: [[12.2, 1760, 1060], [12.95, 1290, 380]], clicks: [13.11], end: 13.38 },
-  { k: [[17.45, 1760, 1060], [17.78, DOC_X[0] + 250, 780], [18.08, DOC_X[1] + 250, 780], [18.44, DOC_X[2] + 250, 780], [19.2, DOC_X[2] + 330, 860]], clicks: CLICK6, end: 19.4 },
-  { k: [[21.55, 1560, 1060], [22.55, 1168, 674]], clicks: [22.93], end: 99 },
+  { k: [[11.9, 1760, 1060], [12.45, 1300, 400]], clicks: [12.62], end: 12.78 },
+  { k: [[17.72, 1760, 1060], [18.02, DOC_X[0] + 250, 780], [18.28, DOC_X[1] + 250, 780], [18.53, DOC_X[2] + 250, 780], [19.0, DOC_X[2] + 330, 860]], clicks: CLICK7, end: 19.0 },
+  { k: [[22.35, 1560, 1060], [22.95, 1168, 674]], clicks: [23.12], end: 99 },
 ];
 function cursorAt(t) {
   for (const c of CUR) {
@@ -239,178 +316,206 @@ function cursorAt(t) {
       const [ta, xa, ya] = c.k[i - 1], [tb, xb, yb] = c.k[i];
       if (t >= ta) { const q = eio(P(t, ta, tb)); x = L(xa, xb, q); y = L(ya, yb, q); }
     }
-    const o = P(t, t0, t0 + .2) * (1 - P(t, c.end - .15, c.end));
+    const o = P(t, t0, t0 + .15) * (1 - P(t, c.end - .12, c.end));
     let press = 0, rip = null;
     for (const ct of c.clicks) {
-      press = Math.max(press, 1 - Math.abs(t - ct - .03) / .09);
-      if (t >= ct && t < ct + .5) rip = P(t, ct, ct + .5);
+      press = Math.max(press, 1 - Math.abs(t - ct - .03) / .08);
+      if (t >= ct && t < ct + .45) rip = P(t, ct, ct + .45);
     }
     return { x, y, o, press: C(press), rip };
   }
   return null;
 }
 
+// measure match-cut anchors with everything at rest
+function centerOf(e) { const r = e.getBoundingClientRect(); return [r.left + r.width / 2, r.top + r.height / 2]; }
+let A94row, A94card;
+function measure() { rows[0].n.textContent = '94'; A94row = centerOf(rows[0].n); A94card = centerOf(score6); }
+
 // ---------- render ----------
 window.render = function (t) {
-  const fi = Math.min(RMS.length - 1, Math.max(0, Math.round(t * 30)));
-  const rms = RMS[fi];
-  let si = SC.findIndex(([a, b]) => t >= a && t < b);
-  if (si < 0) si = SC.length - 1;
-  scenes.forEach((sc, i) => {
-    const [a, b] = SC[i];
-    if (i !== si) { sc.style.opacity = 0; sc.style.visibility = 'hidden'; return; }
-    sc.style.visibility = 'visible';
-    const x = i === SC.length - 1 ? 0 : eio(P(t, b - .26, b));
-    S(sc, { o: 1 - x, y: -18 * x, blur: 5 * x });
-  });
+  if (!A94row) measure();
+  const rms = RMS[Math.min(RMS.length - 1, Math.max(0, Math.round(t * 30)))];
+  drawField(t);
 
-  // glow: follow scene focus, breathe with the music, flash on reveals
-  const [ga, gb] = [GLOW[Math.max(0, si - 1)], GLOW[si]];
-  const gq = eio(P(t, SC[si][0], SC[si][0] + .6));
-  const flash = Math.max(Math.exp(-Math.max(0, t - 4.39) * 3) * (t >= 4.39 ? 1 : 0), Math.exp(-Math.max(0, t - 20.75) * 3) * (t >= 20.75 ? .7 : 0));
+  const grid = document.getElementById('grid');
+  grid.style.opacity = t < 2.62 ? 1 : t < 13.1 ? L(1, .25, P(t, 2.62, 3.2)) : L(.25, 1, P(t, 13.1, 13.6));
+  const flash = [4.62, 11.12, 17.62, 22.12].reduce((m, ft) => Math.max(m, t >= ft ? Math.exp(-(t - ft) * 3.2) : 0), 0);
   const glow = document.getElementById('glow');
-  glow.style.left = L(ga[0], gb[0], gq) + 'px'; glow.style.top = L(ga[1], gb[1], gq) + 'px';
-  glow.style.opacity = C(.62 + .32 * rms + .45 * flash, 0, 1.3);
-  glow.style.transform = `scale(${1 + .05 * rms + .08 * flash})`;
+  glow.style.opacity = C((t < 1.62 ? .35 : .6) + .3 * rms + .5 * flash, 0, 1.3);
+  glow.style.transform = `scale(${1 + .05 * rms + .1 * flash})`;
+  S(corner, { o: .9 * show({ style: {} }, t, 4.9, 21.0) });
 
-  // corner logo: hidden where the big logo is on screen
-  const cornerOn = (t < 4.2) || (t >= 7.09 && t < 19.5);
-  const cornerK = t < 4.39 ? P(t, 0, .4) * (1 - P(t, 4.1, 4.3)) : P(t, 7.1, 7.5) * (1 - P(t, 19.3, 19.6));
-  S(corner, { o: cornerOn ? cornerK * .9 : 0 });
-
-  // ----- scene 1
-  if (si === 0) {
-    const k1 = eo(P(t, .15, .55)); S(h1a, { o: k1, y: (1 - k1) * 30, s: L(1.06, 1, k1) });
-    rise(h1b, t, 1.9, .45);
-    S(br, { o: eo(P(t, .05, .4)) * L(1, .5, eo(P(t, 1.9, 2.4))), y: (1 - eo(P(t, .05, .5))) * 40 });
-    let nEff = 0; const ks = TAB_T.map(ta => { const k = eo(P(t, ta, ta + .18)); nEff += k; return k; });
-    const w = Math.min(250, 1250 / Math.max(1, nEff));
-    let xx = 100, active = -1;
-    tabs.forEach((tb, i) => {
-      const k = ks[i]; if (k > .5) active = i;
-      tb.style.left = xx + 'px'; tb.style.width = Math.max(0, w * k - 2) + 'px'; tb.style.opacity = k;
-      xx += w * k;
-    });
-    tabs.forEach((tb, i) => { tb.style.background = i === active ? '#0F141D' : 'transparent'; tb.style.padding = w < 90 ? '0 10px' : '0 14px'; });
-    badge.textContent = ks.filter(k => k > .5).length;
-    const bk = TAB_T.findLastIndex(ta => t >= ta);
-    badge.style.transform = `scale(${1 + .18 * Math.max(0, 1 - (t - (TAB_T[bk] ?? -9)) / .15)})`;
-    const r = rng(3 + Math.max(0, active));
-    skel.forEach(s => { s.style.width = 120 + r() * 140 + 'px'; });
-    jobRows.forEach(([a, b]) => { a.style.width = 280 + r() * 380 + 'px'; b.style.width = 180 + r() * 260 + 'px'; });
-    const rk = eo(P(t, 1.85, 2.3));
-    S(resWrap, { o: rk, x: (1 - rk) * 220, r: -3 * rk });
-    const fidx = FILE_T.findLastIndex(ft => t >= ft);
-    fname.textContent = FILES[Math.max(0, fidx)];
-    const fPulse = fidx >= 0 ? Math.max(0, 1 - (t - FILE_T[fidx]) / .2) : 0;
-    fname.style.borderColor = `rgba(94,232,212,${.1 + .6 * fPulse})`;
-    fname.style.transform = `scale(${1 + .05 * fPulse})`;
-    const rr = rng(20 + Math.max(0, fidx));
-    res1Lines.forEach((ln, i) => {
-      ln.style.width = 35 + rr() * 65 + '%';
-      const hot = fPulse > 0 && (i + fidx) % 4 === 0;
-      ln.style.background = hot ? `rgba(94,232,212,${.25 + .5 * fPulse})` : 'rgba(255,255,255,.12)';
-    });
+  // 1+2 hook
+  {
+    const typed = CHAR_T.filter(ct => t >= ct).length;
+    sText.textContent = QUERY.slice(0, typed);
+    caret.style.opacity = t < 1.45 ? ((Math.floor(t * 3.4) % 2 === 0 || typed < QUERY.length) ? 1 : 0) : 0;
+    const enter = Math.max(0, 1 - Math.abs(t - 1.47) / .08);
+    const m = eio(P(t, 1.5, 1.9));
+    search.style.left = L(310, 234, m) + 'px'; search.style.top = L(476, 421, m) + 'px';
+    search.style.width = L(1300, 1452, m) + 'px'; search.style.height = L(128, 36, m) + 'px';
+    search.style.borderRadius = L(64, 18, m) + 'px'; search.style.padding = `0 ${L(40, 20, m)}px`;
+    sText.style.fontSize = L(56, 18, m) + 'px'; sText.style.color = m > .5 ? '#AAB2BF' : '#F2F4F7';
+    sIcon.style.opacity = 1 - m; sIcon.style.width = L(46, 0, m) + 'px'; search.style.gap = L(22, 0, m) + 'px';
+    search.style.background = m > .6 ? '#070A10' : '#0C1018';
+    search.style.borderColor = `rgba(94,232,212,${L(.45, 0, m) + .5 * enter})`;
+    search.style.boxShadow = m > .9 ? 'none' : `0 0 ${60 + 80 * enter}px rgba(94,232,212,${.12 + .3 * enter})`;
+    const openK = P(t, 0, .25);
+    S(search, { o: openK * (1 - P(t, 1.9, 1.92)), s: L(.96, 1, eo(openK)) * (1 + .03 * enter) });
+    if (t >= 1.9) B1.urlPill.textContent = QUERY;
+    // browser assembles around the bar, then the camera pulls back
+    const z = camZ(t), cy = camCY(t);
+    const bk = eo(P(t, 1.5, 1.85));
+    S(B1.br, { o: bk * (1 - P(t, 3.95, 4.0)), y: cy - 670, s: z * L(.97, 1, bk) });
+    const ks = TAB_T.map(ta => eo(P(t, ta, ta + .14)));
+    let active = 0; ks.forEach((k, i) => { if (k > .5) active = i; });
+    layoutTabs(B1, ks, active);
+    const bi = TAB_T.findLastIndex(ta => t >= ta);
+    B1.badge.style.transform = `scale(${1 + .2 * Math.max(0, 1 - (t - (TAB_T[bi] ?? -9)) / .12)})`;
+    const k1 = eo(P(t, 1.8, 2.15)); const k1o = eio(P(t, 3.0, 3.2));
+    S(hTabs, { o: k1 * (1 - k1o), y: (1 - k1) * 40 - k1o * 30, s: L(1.12, 1, k1), blur: k1o * 6 });
+    const kj = eo(P(t, 3.1, 3.45)), kjo = eio(P(t, 4.35, 4.6));
+    S(hJobs, { o: kj * (1 - kjo), s: L(.85, 1, kj) * (1 + .25 * kjo), blur: kjo * 10 });
+    jobsNum.textContent = t >= 3.85 ? '2,000,000+' : fmt(2000000 * eo(P(t, 3.1, 3.85)));
   }
 
-  // ----- scene 2
-  if (si === 1) {
-    pop(lg2tile, t, 4.39, .45);
-    lg2word.forEach(w => { const k = eo(P(t, 4.47, 4.85)); S(w, { o: k, x: (1 - k) * -30 }); });
-    const a = eo(P(t, 4.62, 5.0)); S(h2a, { o: a, y: (1 - a) * 36, blur: (1 - a) * 8 });
-    const b = eo(P(t, 5.15, 5.55)); S(h2b, { o: b, y: (1 - b) * 36, blur: (1 - b) * 8 });
-  }
-
-  // ----- scene 3
-  if (si === 2) {
-    rise(e3, t, 7.12); rise(h3, t, 7.2);
-    const zk = eo(P(t, 7.14, 7.45)); S(zone, { o: zk, s: L(.97, 1, zk) });
-    const land = P(t, 7.25, 7.64);
-    S(res3, { o: C(land * 4), y: (1 - eb(land)) * -380, r: (1 - eo(land)) * -6 });
-    const landed = t >= 7.64;
-    zone.style.borderStyle = landed ? 'solid' : 'dashed';
-    zone.style.borderColor = landed ? `rgba(94,232,212,${.25 + .5 * Math.max(0, 1 - (t - 7.64) / .5)})` : 'rgba(94,232,212,.4)';
-    zoneLbl.style.opacity = 1 - P(t, 7.55, 7.7);
-    const sk = P(t, 7.78, 8.55);
-    scan.style.opacity = sk > 0 && sk < 1 ? 1 : 0;
-    scan.style.top = L(345, 835, eio(sk)) + 'px';
-    res3Lines.forEach((ln, i) => {
-      const ly = 335 + 116 + i * 24;
-      const past = L(345, 835, eio(sk)) > ly && sk > 0;
-      ln.style.background = past ? 'rgba(94,232,212,.32)' : 'rgba(255,255,255,.12)';
+  // 3 drop
+  {
+    const out = eio(P(t, 7.62, 7.95));
+    show(e3, t, 4.72, 7.9); show(h3, t, 4.8, 7.9);
+    const d = P(t, 4.3, 4.62);
+    const imp = t >= 4.62 ? Math.max(0, 1 - (t - 4.62) / .25) : 0;
+    S(res, { o: C(d * 4) * (1 - out), y: L(-900, 0, eo(d)) - out * 20, s: (1 + .06 * imp) * L(1, .8, out), r: (1 - eo(d)) * 8 });
+    const rot = .32 * (t - 4.62);
+    chips.forEach((c, i) => {
+      const a0 = i / CHIPS.length * Math.PI * 2 - Math.PI / 2 + rot;
+      const k = eb(P(t, 5.0 + i * .09, 5.4 + i * .09));
+      const rx = 560 * L(.3, 1, k), ry = 285 * L(.3, 1, k);
+      const x = 960 + Math.cos(a0) * rx, y = 575 + Math.sin(a0) * ry;
+      c.style.opacity = C(P(t, 5.0 + i * .09, 5.2 + i * .09)) * (1 - out);
+      c.style.visibility = c.style.opacity > 0 ? 'visible' : 'hidden';
+      c.style.transform = `translate(${x}px,${y}px) translate(-50%,-50%) scale(${L(.5, 1, C(k)) * L(1, .7, out)})`;
     });
-    rise(chipHd, t, 8.05, .4, 14);
-    chips.forEach((c, i) => pop(c, t, 8.2 + i * .17, .38));
-    rise(lock3, t, 8.1, .45, 18);
+    show(lock3, t, 5.7, 7.9, 18);
   }
 
-  // ----- scene 4
-  if (si === 3) {
-    rise(e4, t, 10.4); rise(h4, t, 10.48);
-    const ck = eio(P(t, 10.55, 11.5));
-    rise(cnt4, t, 10.55, .4, 14);
-    c4a.textContent = ck >= 1 ? '2,000,000+' : fmt(2000000 * ck);
-    c4b.textContent = fmt(45000 * ck);
+  // 4+5 ranked + gag
+  {
+    const endL = 12.9;
+    show(e4, t, 7.7, endL); show(h4, t, 7.78, endL); show(cnt4, t, 7.95, endL, 14);
     rows.forEach((r, i) => {
-      const k = eo(P(t, 10.7 + i * .12, 11.1 + i * .12));
-      const sel = i === 0 ? eo(P(t, 13.11, 13.3)) : 0;
-      S(r.e, { o: k, x: (1 - k) * 60, s: 1 + .02 * sel });
-      const f = eo(P(t, 11.0 + i * .1, 11.8 + i * .1));
+      const k = P(t, 7.95 + i * .17, 8.35 + i * .17);
+      const hit = i === 0 ? Math.max(0, 1 - Math.abs(t - 11.14) / .12) : 0;
+      const sel = i === 0 ? eo(P(t, 12.62, 12.72)) : 0;
+      const ko = eio(P(t, endL - .26, endL));
+      S(r.e, { o: eo(k) * (1 - ko), s: L(.94, 1, eo(k)) * (1 + .015 * hit), y: 6 * hit - ko * 18, blur: ko * 5 });
+      const f = eo(P(t, 8.62 + i * .25, 9.1 + i * .25));
       r.fill.style.width = r.v * f + '%';
       r.n.textContent = Math.round(r.v * f);
-      r.e.style.borderColor = i === 0 ? `rgba(94,232,212,${.25 + .6 * sel})` : 'rgba(255,255,255,.07)';
-      r.e.style.background = i === 0 ? `rgba(${L(12, 16, sel)},${L(16, 36, sel)},${L(24, 38, sel)},1)` : '#0C1018';
-      r.e.style.boxShadow = i === 0 ? `0 0 ${50 * sel}px rgba(94,232,212,${.22 * sel})` : 'none';
+      r.n.style.opacity = i === 0 && t >= 12.62 ? 0 : 1;
+      const lockK = i === 0 ? Math.max(hit, sel) : 0;
+      r.e.style.borderColor = i === 0 ? `rgba(94,232,212,${.25 + .7 * lockK})` : 'rgba(255,255,255,.07)';
+      r.e.style.boxShadow = i === 0 ? `0 0 ${60 * lockK}px rgba(94,232,212,${.35 * lockK})` : 'none';
     });
-    const tk = eo(P(t, 12.0, 12.35)); S(top4, { o: tk, s: L(.8, 1, tk) });
+    S(top4, { o: eo(P(t, 10.0, 10.3)), s: L(.8, 1, eo(P(t, 10.0, 10.3))) });
+    // the gag: falls in, hits the locked #1 on 11.12, bounces, tumbles away
+    let py, px = 0, pr = 0;
+    if (t < 11.12) { const q = P(t, 10.62, 11.12); py = L(-420, 0, q * q); }
+    else { const q = t - 11.12; px = -900 * q * q * 1.2 - 180 * q; py = -260 * q + 1500 * q * q; pr = -70 * q * q - 20 * q; }
+    S(promo, { o: t >= 10.62 && t < 12.2 ? 1 : 0, x: px, y: py, r: pr });
+    const nk = P(t, 11.12, 11.3);
+    S(nope, { o: nk > 0 ? C(nk * 3) * (1 - P(t, 11.95, 12.15)) : 0, s: L(1.6, 1, eb(nk)), r: -6 });
+    show(pay, t, 11.14, endL, 20, .35);
+    // big 94: row → full screen → score card
+    let bx, by, bs, bo = 0;
+    if (t >= 12.62 && t < 13.62) {
+      const a = eio(P(t, 12.62, 13.0)), b = eio(P(t, 13.15, 13.55));
+      bx = L(L(A94row[0], 960, a), A94card[0], b); by = L(L(A94row[1], 540, a), A94card[1], b);
+      bs = L(L(52 / 520, 1, a), 170 / 520, b); bo = 1;
+    }
+    S(big94, { o: bo, x: (bx ?? 0) - 400, y: (by ?? 0) - 260, s: bs ?? 1 });
+    big94.style.textShadow = `0 0 ${80 * (1 - P(t, 13.15, 13.55))}px rgba(94,232,212,.45)`;
   }
 
-  // ----- scene 5
-  if (si === 4) {
-    rise(e5, t, 13.67); rise(h5, t, 13.75);
-    const ck = eo(P(t, 13.82, 14.25)); S(card5, { o: ck, s: L(.94, 1, ck), y: (1 - ck) * 20 });
-    score5.textContent = Math.round(94 * eo(P(t, 13.95, 14.75)));
-    bars5.forEach((b, i) => {
-      rise(b.e, t, 13.92 + i * .1, .35, 18);
-      const f = eo(P(t, 14.0 + i * .12, 14.6 + i * .12));
+  // 6 why
+  {
+    show(e6, t, 13.2, 15.7); show(h6, t, 13.28, 15.7);
+    const ck = eo(P(t, 13.2, 13.5)), co = eio(P(t, 15.55, 15.85));
+    S(card6, { o: ck * (1 - co), s: L(.95, 1, ck), blur: co * 6 });
+    score6.style.opacity = t >= 13.55 ? 1 : 0;
+    bars.forEach((b, i) => {
+      const ki = eo(P(t, 13.5 + i * .08, 13.85 + i * .08));
+      const m = eio(P(t, 15.62 + i * .04, 16.02 + i * .04));
+      const tx = DOC_X[1] + 36, ty = 300 + 160 + i * 34;
+      const bx = 960, byy = 350 + i * 118;
+      b.e.style.visibility = ki > 0 && m < 1 ? 'visible' : 'hidden';
+      b.e.style.opacity = ki * (1 - P(t, 15.95, 16.1));
+      b.e.style.transform = `translate(${L(0, tx - bx, m)}px,${L((1 - ki) * 20, ty - byy - 30, m)}px) scale(${L(1, .5, m)},${L(1, .35, m)})`;
+      b.l.style.opacity = b.v.style.opacity = 1 - m * 2;
+      const f = eo(P(t, 13.62 + i * .25, 14.0 + i * .25));
       b.fill.style.width = b.val * f + '%'; b.v.textContent = Math.round(b.val * f);
     });
-    rise(pay5, t, 14.9, .45, 20);
   }
 
-  // ----- scene 6
-  if (si === 5) {
-    rise(e6, t, 16.96); rise(h6, t, 17.04);
+  // 7 mitosis
+  {
+    show(e7, t, 15.75, 19.12); show(h7, t, 15.83, 19.12);
+    const ko = eio(P(t, 18.86, 19.12));
     docs.forEach((d, i) => {
-      const k = P(t, 17.1 + i * .06, 17.47 + i * .04);
-      const e = eo(k);
-      S(d.e, { o: C(k * 3), x: (DOC_X[1] - DOC_X[i]) * (1 - e), y: 70 * (1 - e), r: (i - 1) * 9 * (1 - e), s: L(.9, 1, e) });
-      const done = t >= CLICK6[i];
-      const pk = done ? Math.max(0, 1 - (t - CLICK6[i]) / .25) : 0;
+      let x = 0, sx = 1, sy = 1, o = 0;
+      const appear = eo(P(t, 15.85, 16.15));
+      if (i === 0) { o = appear; const q = P(t, 16.62, 16.98); x = (DOC_X[0] - DOC_X[1]) * eb(q); const sq = Math.sin(Math.PI * q); sx = 1 + .12 * sq; sy = 1 - .08 * sq; }
+      if (i === 1) { o = t >= 16.62 ? 1 : 0; const sq = Math.sin(Math.PI * P(t, 16.62, 16.98)); sx = 1 + .08 * sq; sy = 1 - .05 * sq; }
+      if (i === 2) { o = t >= 17.12 ? 1 : 0; const q = P(t, 17.12, 17.48); x = (DOC_X[2] - DOC_X[1]) * eb(q); const sq = Math.sin(Math.PI * q); sx = 1 + .12 * sq; sy = 1 - .08 * sq; }
+      const settle = t >= 17.62 ? Math.max(0, 1 - (t - 17.62) / .3) : 0;
+      S(d.e, { o: o * (1 - ko), x, y: (1 - appear) * 30 - ko * 18, sx: sx * (1 + .04 * settle) * L(.94, 1, appear), sy: sy * (1 + .04 * settle) * L(.94, 1, appear), blur: ko * 5 });
+      d.e.style.borderColor = `rgba(94,232,212,${.08 + .6 * settle})`;
+      d.ds.style.opacity = eo(P(t, 17.62 + i * .08, 17.9 + i * .08));
+      const bk = eo(P(t, 17.62, 17.9));
+      const done = t >= CLICK7[i];
+      const pk = done ? Math.max(0, 1 - (t - CLICK7[i]) / .22) : 0;
+      d.b.style.opacity = bk;
       d.b.style.background = done ? '#5EE8D4' : 'transparent';
       d.b.style.color = done ? '#05110F' : '#5EE8D4';
-      d.b.style.transform = `scale(${1 - .04 * pk})`;
+      d.b.style.transform = `scale(${1 - .05 * pk})`;
       d.b.innerHTML = done ? ICON.check('#05110F') + '<span>downloaded</span>' : ICON.down('#5EE8D4') + `<span>download ${d.ext}</span>`;
     });
-    rise(toast, t, 18.66, .35, 24);
   }
 
-  // ----- scene 7
-  if (si === 6) {
-    pop(lg7.children[0], t, 19.72, .45);
-    [lg7.children[1], lg7.children[2]].forEach(w => { const k = eo(P(t, 19.8, 20.2)); S(w, { o: k, x: (1 - k) * -24 }); });
-    rise(h7, t, 19.95, .5, 34);
-    const ck = P(t, 20.55, 20.95);
-    S(ctaWrap, { o: C(ck * 3), s: L(.7, 1, eb(ck)) });
-    const hover = eo(P(t, 22.3, 22.55));
-    const pr = Math.max(0, 1 - Math.abs(t - 22.96) / .1);
+  // 8 callback
+  {
+    const vis = show(B2.br, t, 19.12, 21.12, 40, .35);
+    show(h8, t, 19.2, 21.12, 26, .35);
+    const ks = B2.tabs.map((_, i) => { if (i === 0) return 1; const ct = CLOSE_T[19 - i]; return 1 - eio(P(t, ct, ct + .1)); });
+    const morph = eo(P(t, 20.62, 20.9));
+    layoutTabs(B2, ks, t < 20.62 ? ks.findLastIndex(k => k > .5) : 0);
+    const last = CLOSE_T.findLastIndex(ct => t >= ct);
+    B2.badge.style.transform = `scale(${1 + .2 * Math.max(0, 1 - (t - (CLOSE_T[last] ?? -9)) / .1)})`;
+    const t0 = B2.tabs[0];
+    if (t >= 20.62) { t0.fav.style.background = '#5EE8D4'; t0.fav.textContent = 'b'; t0.tt.textContent = 'bespokejobs.ai'; t0.tt.style.color = '#F2F4F7'; B2.urlPill.textContent = 'bespokejobs.ai'; }
+    else { t0.fav.style.background = FAV[0]; t0.fav.textContent = ''; t0.tt.textContent = QUERY; t0.tt.style.color = '#AAB2BF'; B2.urlPill.textContent = QUERY; }
+    B2.mini.style.opacity = morph;
+    B2.skel.concat(B2.jobRows.flat()).forEach(s => { s.style.opacity = 1 - morph; });
+    B2.jobRows.forEach(r => r[0].parentNode.style.opacity = 1 - morph);
+    B2.br.style.boxShadow = `0 0 ${80 * morph}px rgba(94,232,212,${.2 * morph}), 0 30px 90px rgba(0,0,0,.55)`;
+  }
+
+  // 9 CTA
+  {
+    pop(lg9.children[0], t, 21.2, .45);
+    [lg9.children[1], lg9.children[2]].forEach(w => { const k = eo(P(t, 21.28, 21.65)); S(w, { o: k, x: (1 - k) * -24 }); });
+    const hk = eo(P(t, 21.42, 21.9)); S(h9, { o: hk, y: (1 - hk) * 34, blur: (1 - hk) * 6 });
+    const ck = P(t, 21.92, 22.3);
+    S(ctaWrap, { o: C(ck * 3), s: L(.6, 1, eb(ck)) });
+    const hover = eo(P(t, 22.8, 23.0));
+    const pr = Math.max(0, 1 - Math.abs(t - 23.15) / .09);
     cta.style.transform = `scale(${1 + .03 * hover - .05 * pr})`;
-    const pulse = t >= 22.93 ? Math.max(0, 1 - (t - 22.93) / .6) : 0;
-    cta.style.boxShadow = `0 0 ${40 + 60 * pulse + 20 * hover}px rgba(94,232,212,${.25 + .35 * pulse + .1 * hover})`;
-    rise(foot7, t, 21.0, .45, 16);
+    const pulse = t >= 23.12 ? Math.max(0, 1 - (t - 23.12) / .7) : 0;
+    cta.style.boxShadow = `0 0 ${40 + 70 * pulse + 20 * hover}px rgba(94,232,212,${.25 + .4 * pulse + .1 * hover})`;
+    show(foot9, t, 22.4, 99, 16);
   }
 
-  // cursor
   const cu = cursorAt(t);
   if (cu) {
     cursor.style.opacity = cu.o;
@@ -419,7 +524,7 @@ window.render = function (t) {
     else ripple.style.opacity = 0;
   } else { cursor.style.opacity = 0; ripple.style.opacity = 0; }
 };
-window.render(0);
+document.fonts.ready.then(() => window.render(0));
 </script>
 </body>
 </html>

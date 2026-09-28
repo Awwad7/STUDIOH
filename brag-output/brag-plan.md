@@ -1,52 +1,43 @@
-# /brag plan — BespokeJobs (revamp of bespokejobs-promo.mp4)
+# /brag plan v2: BespokeJobs, "Close the tabs"
 
-## Source
-- The user's 41s promo `bespokejobs-promo.mp4` (branding, UI, demo data) plus their written brief.
-- bespokejobs.ai itself is blocked from this environment, so everything visual comes from the uploaded video.
+## Angle
+The job hunt is a sea of tabs. v2 is shot as one continuous camera move. A search pulls back into a field of 2,000,000 listings, and dropping in a resume makes the ones that fit light up. Those lit listings fly together into the ranked shortlist, and we dive into the score and watch the documents split out of it. It ends where it started: all the tabs slam shut except one.
+
+The humor comes from the product's own claim. A paid "Promoted" listing tries to force its way into first place and gets bounced out of the list: **employers can't pay to rank higher.**
 
 ## Rubric
-- **What it is:** BespokeJobs reads your resume, ranks live job openings against your experience, and writes a tailored resume and cover letter for the roles you pick. Free during beta.
-- **Who it's for:** US job seekers who are actively applying (most fields, not just tech) and are tired of searching lots of sites and rewriting their resume for every job.
-- **What sets it apart:** transparent scores (skills, title, seniority, location) that employers can't pay to influence; two resumes (ATS + hiring team) plus a cover letter per role; 2M+ jobs from ~45,000 employers; resumes are never sold or sent to employers.
-- **Strongest claim:** "see exactly why a role scored." / "employers can't pay to rank higher."
-- **Visual hook:** twenty job-search tabs piling up on screen and a resume filename mutating `resume_v1.docx` → `resume_FINAL_v7_actually_final.docx`, then everything is swept away.
-- **Real UI to show:** upload card with skill chips → ranked shortlist → score breakdown card → three document cards with download buttons (all taken from the original video).
-- **Tone:** polished, with one light joke in the hook (app-store clarity, polished pacing).
-- **Share caption:** see share-copy.txt.
+- **What:** reads your resume, ranks live openings against your experience, and writes a tailored resume and cover letter for the roles you pick. Free during beta.
+- **For:** US job seekers who are actively applying, in most fields, and tired of searching lots of sites and rewriting the same resume.
+- **Different:** a transparent score breakdown that employers can't pay to change, two resumes plus a cover letter per role, 2M+ jobs from about 45,000 employers, and resumes that are never sold or sent to employers.
+- **Visual hook:** a search that explodes into 20 tabs, then into 2,000,000 listings, in the first 4.6 seconds.
+- **Real UI:** upload with skill chips, ranked rows, score card and bars, document cards with download buttons (all from the brand video).
+- **Tone:** cinematic energy, played clean. One gag.
 
-## What changes from the original
-- 41s → 23.5s. The hook lands within the first 5s, and the brand reveal lands on a beat at 4.39s.
-- The hook is animated (tabs pile up, the filename keeps mutating) instead of static text.
-- The UI is shown at 2–3× the original size and is centered, instead of small cards in empty space.
-- The proof points become part of the flow: privacy under upload, the 2M+/45,000 counter over the ranked list, and "employers can't pay" under the breakdown. There's no separate stats slide.
-- A simulated cursor clicks through the flow: pick the top match, then download the documents.
-
-## Visual identity (sampled from the video)
-- Background `#05060C`, faint 64px grid, teal radial glow `#0B2A2A`
-- Card `#0C1018`, border `rgba(94,232,212,.18)`; the active card glows
-- Accent / mint `#5EE8D4`; text `#F2F4F7`; muted `#8A93A3`
-- Inter (variable), 600–700 for headlines; lowercase headlines as in the original
-- Logo: mint rounded tile with a dark "b", then `bespokejobs` in white and `.ai` in mint
+## Identity
+Background `#05060C` with a 64px grid and teal glow. Mint `#5EE8D4`. Cards `#0C1018`. Inter. Lowercase headlines. Logo: mint "b" tile, `bespokejobs`, then `.ai` in mint. The "Promoted" villain gets warm gold `#F5C451`, the only off-palette color, so it reads as an intruder.
 
 ## Avoid
-- Anything like "beat the ATS". The ATS resume is labeled only "for applicant tracking systems".
-- Anything implying we apply for people. The only action is download.
-- Real user data. The demo data is Sample Candidate, Northwind Health, Halcyon Foods, Lakeshore Logistics and Aster Manufacturing.
+No "beat the ATS", no applying for anyone (the only actions are rank, open and download), and demo data only.
 
-## Storyboard — 1920×1080, 30fps, 23.5s
-| # | Scene | Time | On screen |
-|---|---|---|---|
-| 1 | Hook | 0.00–4.39 | Tabs fly in and stack like a browser tab strip that overflows (fictional titles: "Operations Manager – Chicago…", "Jobs near me – page 3"…), with a counter ticking to **20**. Headline: **"twenty tabs."** (0.4s). At 1.9s: **"one resume, rewritten every time."**, and a resume card's filename cycles v1 → v2 → FINAL → FINAL_v7_actually_final. |
-| 2 | Reveal | 4.39–7.09 | (Beat-locked at 4.39.) The tabs get swept away and the logo tile pops. **"stop searching."** then **"read the ones that fit."** in mint. |
-| 3 | Upload | 7.09–10.37 | `01 · upload` — **"drop in your resume."** The Sample Candidate resume drops in, a scan line sweeps, then 8 skill chips pop out on alternate beats. Footer: 🔒 "never sold. never sent to employers." |
-| 4 | Ranked | 10.37–13.64 | `02 · ranked` — **"live openings, ranked for you."** A counter "2,000,000+ open jobs · 45,000 employers" counts up. 4 rows arrive and their bars fill (94/89/83/71). The cursor moves to the top row and clicks it at 13.11 (strong cue). |
-| 5 | Why | 13.64–16.93 | `03 · why it matched` — **"see exactly why a role scored."** The score card 94 counts up and 4 bars fill: Skills overlap 96, Title alignment 92, Seniority 90, Location fit 100. Line: **"employers can't pay to rank higher."** |
-| 6 | Documents | 16.93–19.66 | `04 · tailored documents` — **"two resumes and a cover letter, per role."** Three cards fan in: Resume *for applicant tracking systems* (.docx), Resume *for hiring teams* (.pdf), Cover letter *written for this role* (.pdf). The cursor clicks download and a "3 files downloaded" toast appears. |
-| 7 | CTA | 19.66–23.50 | Logo, then **"a job search tailored to you."** The **Find my matches** button lands and pulses at 20.75. Under it: "free during beta · bespokejobs.ai". Music fades out. |
+## Storyboard (1920×1080, 30fps, 24.6s)
+Music: `happy-beats-business-moves-vol-1` (120 BPM), starting at 1.62s when Enter is pressed. That puts its beats at 1.62 + 0.5k, and the track's lift at around 17.6s.
 
-Durations: 4.39 + 2.70 + 3.28 + 3.27 + 3.29 + 2.73 + 3.84 = 23.5s.
+| # | Time | What happens |
+|---|---|---|
+| 1 | 0.00–1.62 | **Cold open, typing.** A huge search bar types "operations manager jobs near me", with keystrokes and no music. Enter. |
+| 2 | 1.62–4.62 | **The pull-back.** The music hits. The search bar snaps into a browser's URL bar, and tabs multiply 1 → 20 ("twenty tabs."). The camera pulls back until the browser is one tile in a grid of thousands, and a counter rolls to **2,000,000 open jobs.** |
+| 3 | 4.62–7.62 | **Drop.** On the beat, the resume slams into the center of the field. A mint shockwave rolls out: listings that don't fit go dark, and the ones that do glow. Skill chips orbit the resume. Headline: "drop in your resume." Small line: "never sold. never sent to employers." |
+| 4 | 7.62–10.6 | **Assemble.** The glowing listings stream across the screen and fuse into the ranked shortlist (94 / 89 / 83 / 71). Headline: "live openings, ranked for you." Counter line: "from 2,000,000+ open jobs · 45,000 employers". |
+| 5 | 10.6–12.6 | **The gag.** A gold "Promoted · $$$" card falls from the top, trying to take #1. It hits the locked top row on the beat (11.12), bounces with an error buzz and tumbles off screen. Line: "employers can't pay to rank higher." |
+| 6 | 12.6–15.6 | **Dive.** The cursor clicks #1, and the "94" flies out to fill the screen, then lands in the score card. Bars fill on half-beats: skills 96, title 92, seniority 90, location 100. Headline: "see exactly why a role scored." |
+| 7 | 15.6–19.1 | **Mitosis.** The four bars collapse into one resume. It splits (16.62) into a resume for applicant tracking systems and one for hiring teams, then splits again (17.12) into a cover letter. The lift in the music (17.62) lands the fan-out. Three rapid download clicks on the beat. |
+| 8 | 19.1–21.1 | **Callback.** The browser from the opening returns with all 20 tabs. "now close the other nineteen." Tabs slam shut right to left, faster and faster. The last tab turns into bespokejobs.ai with your matches inside. |
+| 9 | 21.1–24.6 | **CTA.** Logo, then "a job search tailored to you." The **Find my matches** button lands on the beat and gets clicked. "free during beta · bespokejobs.ai". |
 
-## Audio
-- Music: `happy-beats-business-moves-vol-12` (steady, clean; polished) at about 0.34, with a 0.2s fade-in and a 1.4s fade-out.
-- Music cue guidance (bundled preset, 110 BPM, beat ≈ 0.545s): lock the reveal to 4.39, the top-match click to 13.11 and the document fan-in to 17.47. Skill chips go on alternate beats (7.64, 8.74, 9.83…).
-- SFX (sparse, low high-frequency risk): soft ticks on a few tabs (`ui/rollover2`), `impactSoft_medium_001` on the reveal, `drop_001` when the resume lands, `click_003` on the row click and the download click, `card-slide-1` on the document fan, and `bong_001` on the CTA button.
+## Sound
+- Keystrokes from the bundled CC0 keyboard set. A soft click on Enter, then the music drops in.
+- Card-fan whoosh on the tab spawn. A layered soft impact on the resume drop.
+- On the gag: a card shove for the entrance, then an error buzz plus a soft heavy thud on the bounce.
+- Clicks for the cursor. Drops for the two splits. A bell on the lift.
+- A ratchet of tiny ticks as the tabs close. A bong on the last tab. A soft impact on the CTA.
+- Everything sits under the music.

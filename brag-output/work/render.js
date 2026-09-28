@@ -3,7 +3,7 @@ const path = require('path');
 const { spawn } = require('child_process');
 const { chromium } = require(process.env.PW_CORE || 'playwright-core');
 
-const FPS = 30, DUR = 23.5;
+const FPS = 30;
 const [mode, out, ...times] = process.argv.slice(2);
 
 (async () => {
@@ -14,6 +14,7 @@ const [mode, out, ...times] = process.argv.slice(2);
   const page = await browser.newPage({ viewport: { width: 1920, height: 1080 }, deviceScaleFactor: 1 });
   await page.goto('file://' + path.join(__dirname, 'index.html'));
   await page.evaluate(() => document.fonts.ready);
+  const DUR = await page.evaluate(() => window.DURATION);
   const draw = t => page.evaluate(t => { window.render(t); return document.fonts.ready.then(() => 0); }, t);
 
   if (mode === 'stills') {
